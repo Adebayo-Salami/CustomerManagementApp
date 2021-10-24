@@ -1,8 +1,1 @@
-﻿  pch.cpp
-  App.xaml.cpp
-  Dashboard.xaml.cpp
-  MainPage.xaml.cpp
-  XamlTypeInfo.Impl.g.cpp
-  XamlTypeInfo.g.cpp
-     Creating library C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.lib and object C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.exp
-  CustomerManagementApp.vcxproj -> C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.exe
+﻿  CustomerManagementApp.vcxproj -> C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.exe
