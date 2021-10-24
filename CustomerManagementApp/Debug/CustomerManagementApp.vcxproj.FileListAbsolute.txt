@@ -4,6 +4,7 @@ C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerMana
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\resources.pri
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\AppxManifest.xml
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.build.appxrecipe
+C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\CustomerManagementApp.vcxproj.AssemblyReference.cache
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\XamlSaveStateFile.xml
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\ResourceHandlingTask.state
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\CustomerManagementApp.vcxproj.GenerateResource.Cache
