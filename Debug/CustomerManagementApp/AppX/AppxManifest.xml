@@ -32,6 +32,15 @@
   <Capabilities>
     <Capability Name="internetClient" />
   </Capabilities>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>CustomerServ.dll</Path>
+        <ActivatableClass ActivatableClassId="CustomerServ.Service" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="CustomerServ.CustomerService" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="cl.exe" Version="19.29.30136.0 built by: vcwrkspc" />
     <build:Item Name="VisualStudio" Version="16.0" />

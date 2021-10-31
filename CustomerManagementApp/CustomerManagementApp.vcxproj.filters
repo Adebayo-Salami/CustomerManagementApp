@@ -11,15 +11,24 @@
     <Filter Include="Main">
       <UniqueIdentifier>{2212ba8e-b08c-4ed8-9fb7-1172f1ad0337}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{daa7b160-fd24-4a4a-9e45-ed15b91525fc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="User.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="User.h">
+      <Filter>Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\LockScreenLogo.scale-200.png">
