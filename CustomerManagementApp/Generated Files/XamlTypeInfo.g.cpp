@@ -41,18 +41,6 @@ template<typename T>
     return ref new ::Platform::Box<T>((T)userType->CreateEnumUIntFromString(input));
 }
 
-template<typename TDeclaringType, typename TValue>
-::Platform::Object^ GetValueTypeMember_MyProperty(::Platform::Object^ instance)
-{
-    return ref new ::Platform::Box<TValue>(safe_cast<TDeclaringType^>(instance)->MyProperty);
-}
-
-template<typename TDeclaringType, typename TValue>
-void SetValueTypeMember_MyProperty(::Platform::Object^ instance, ::Platform::Object^ value)
-{
-    safe_cast<TDeclaringType^>(instance)->MyProperty = safe_cast<::Platform::IBox<TValue>^>(value)->Value;
-}
-
 enum TypeInfo_Flags
 {
     TypeInfo_Flags_None                 = 0x00,
@@ -83,59 +71,66 @@ struct TypeInfo
 const TypeInfo TypeInfos[] = 
 {
     //   0
-    L"Int32", L"",
-    nullptr, nullptr, nullptr, nullptr,
-    -1,
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
-    TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
-    -1,
-    //   1
     L"Object", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
     -1,
-    //   2
-    L"CustomerServ.CustomerService", L"",
-    &ActivateType<::CustomerServ::CustomerService>, nullptr, nullptr, nullptr,
-    1, // Object
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
-    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
-    -1,
-    //   3
+    //   1
     L"Windows.UI.Xaml.Controls.Page", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
-    1, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
     -1,
-    //   4
+    //   2
     L"CustomerManagementApp.MainPage", L"",
     &ActivateType<::CustomerManagementApp::MainPage>, nullptr, nullptr, nullptr,
-    3, // Windows.UI.Xaml.Controls.Page
-    1, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    1, // Windows.UI.Xaml.Controls.Page
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
     TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
     -1,
-    //   5
+    //   3
     L"CustomerManagementApp.Dashboard", L"",
     &ActivateType<::CustomerManagementApp::Dashboard>, nullptr, nullptr, nullptr,
-    3, // Windows.UI.Xaml.Controls.Page
-    1, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    1, // Windows.UI.Xaml.Controls.Page
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
     TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
     -1,
-    //   6
+    //   4
+    L"CustomerManagementAppService.User", L"",
+    &ActivateType<::CustomerManagementAppService::User>, nullptr, nullptr, nullptr,
+    0, // Object
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
+    -1,
+    //   5
     L"Windows.UI.Xaml.Controls.UserControl", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
-    1, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
+    -1,
+    //   6
+    L"CustomerManagementAppService.Company", L"",
+    &ActivateType<::CustomerManagementAppService::Company>, nullptr, nullptr, nullptr,
+    0, // Object
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
+    -1,
+    //   7
+    L"CustomerManagementAppService.Customer", L"",
+    &ActivateType<::CustomerManagementAppService::Customer>, nullptr, nullptr, nullptr,
+    0, // Object
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
     -1,
     //  Last type here is for padding
     L"", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1, 
-    1, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
     TypeInfo_Flags_None,
 };
 
@@ -146,38 +141,39 @@ const UINT TypeInfoLookup[] = {
       0,   //   3
       0,   //   4
       0,   //   5
-      1,   //   6
-      2,   //   7
-      2,   //   8
-      2,   //   9
-      2,   //  10
-      2,   //  11
-      2,   //  12
-      2,   //  13
-      2,   //  14
-      2,   //  15
-      2,   //  16
-      2,   //  17
-      2,   //  18
-      2,   //  19
-      2,   //  20
-      2,   //  21
-      2,   //  22
-      2,   //  23
-      2,   //  24
-      2,   //  25
-      2,   //  26
-      2,   //  27
-      2,   //  28
-      3,   //  29
-      4,   //  30
-      5,   //  31
-      6,   //  32
-      6,   //  33
-      6,   //  34
-      6,   //  35
-      6,   //  36
+      0,   //   6
+      1,   //   7
+      1,   //   8
+      1,   //   9
+      1,   //  10
+      1,   //  11
+      1,   //  12
+      1,   //  13
+      1,   //  14
+      1,   //  15
+      1,   //  16
+      1,   //  17
+      1,   //  18
+      1,   //  19
+      1,   //  20
+      1,   //  21
+      1,   //  22
+      1,   //  23
+      1,   //  24
+      1,   //  25
+      1,   //  26
+      1,   //  27
+      1,   //  28
+      1,   //  29
+      2,   //  30
+      3,   //  31
+      4,   //  32
+      4,   //  33
+      5,   //  34
+      5,   //  35
+      5,   //  36
       7,   //  37
+      8,   //  38
 };
 
 const TypeInfo* GetTypeInfo(::Platform::String^ typeName)
@@ -192,67 +188,6 @@ const TypeInfo* GetTypeInfo(::Platform::String^ typeName)
                 return &TypeInfos[i];
             }
         }
-    }
-    return nullptr;
-}
-
-struct MemberInfo 
-{
-    PCWSTR shortName;
-    ::Platform::Object^ (*getter)(::Platform::Object^);
-    void (*setter)(::Platform::Object^, ::Platform::Object^);
-    int typeIndex;
-    int targetTypeIndex;
-    bool isReadOnly;
-    bool isDependencyProperty;
-    bool isAttachable;
-};
-
-const MemberInfo MemberInfos[] = 
-{
-    //   0 - CustomerServ.CustomerService.MyProperty
-    L"MyProperty",
-    &GetValueTypeMember_MyProperty<::CustomerServ::CustomerService, ::default::int32>,
-    &SetValueTypeMember_MyProperty<::CustomerServ::CustomerService, ::default::int32>,
-    0, // Int32
-    -1,
-    false, false, false,
-};
-
-PCWSTR GetShortName(PCWSTR longName)
-{
-    PCWSTR separator = wcsrchr(longName, '.');
-    return separator != nullptr ? separator + 1: longName;
-}
-
-
-const MemberInfo* GetMemberInfo(::Platform::String^ longMemberName)
-{
-    auto lastDotIndex = longMemberName->Length();
-    while (true)
-    {
-        if (longMemberName->Data()[lastDotIndex] == '.')
-        {
-            const TypeInfo* pTypeInfo = GetTypeInfo(ref new ::Platform::String(longMemberName->Data(), lastDotIndex));
-            const TypeInfo* pNextTypeInfo = pTypeInfo + 1;
-            if (pTypeInfo)
-            {
-                PCWSTR shortMemberName = GetShortName(longMemberName->Data());
-                for (int i = pTypeInfo->firstMemberIndex; i < pNextTypeInfo->firstMemberIndex; i++)
-                {
-                    if (wcscmp(shortMemberName, MemberInfos[i].shortName) == 0)
-                    {
-                        return &MemberInfos[i];
-                    }
-                }
-            }
-            break;
-        }
-        if (lastDotIndex == 0)
-        {
-            break;
-        }
-        lastDotIndex--;
     }
     return nullptr;
 }
@@ -300,12 +235,6 @@ const MemberInfo* GetMemberInfo(::Platform::String^ longMemberName)
         userType->IsMarkupExtension = pTypeInfo->flags & TypeInfo_Flags_IsMarkupExtension;
         userType->CreateFromStringMethod = nullptr;
         userType->SetBoxedType(this->GetXamlTypeByName(::Platform::StringReference(pTypeInfo->boxedTypeIndex >= 0 ? TypeInfos[pTypeInfo->boxedTypeIndex].typeName : L"")));
-        int nextMemberIndex = pTypeInfo->firstMemberIndex;
-        for (int i=pTypeInfo->firstMemberIndex; i < pNextTypeInfo->firstMemberIndex; i++)
-        {
-            userType->AddMemberName(::Platform::StringReference(MemberInfos[i].shortName));
-            nextMemberIndex++;
-        }
         return userType;
     }
 }
@@ -313,20 +242,8 @@ const MemberInfo* GetMemberInfo(::Platform::String^ longMemberName)
 ::Windows::UI::Xaml::Markup::IXamlMember^ ::XamlTypeInfo::InfoProvider::XamlTypeInfoProvider::CreateXamlMember(::Platform::String^ longMemberName)
 {
     ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = nullptr;
-    const MemberInfo* pMemberInfo = GetMemberInfo(longMemberName);
-    if (pMemberInfo != nullptr)
-    {
-        xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(
-            this,
-            ::Platform::StringReference(pMemberInfo->shortName),
-            ::Platform::StringReference(TypeInfos[pMemberInfo->typeIndex].typeName));
-        xamlMember->Getter = pMemberInfo->getter;
-        xamlMember->Setter = pMemberInfo->setter;
-        xamlMember->TargetTypeName = pMemberInfo->targetTypeIndex >= 0 ? ::Platform::StringReference(TypeInfos[pMemberInfo->targetTypeIndex].typeName) : L"";
-        xamlMember->IsReadOnly = pMemberInfo->isReadOnly;
-        xamlMember->IsDependencyProperty = pMemberInfo->isDependencyProperty;
-        xamlMember->IsAttachable = pMemberInfo->isAttachable;
-    }
+    // No Local Properties
+    (void)longMemberName; // Unused parameter
     return xamlMember;
 }
 

@@ -1,0 +1,10 @@
+namespace CustomerManagementAppService
+{
+    [bindable]
+    [default_interface]
+    runtimeclass Company 
+    {
+        Company();
+        Boolean AddCompany(String companyName, String companyLocation);
+    }
+}

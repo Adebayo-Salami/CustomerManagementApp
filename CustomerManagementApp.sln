@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomerManagementApp", "CustomerManagementApp\CustomerManagementApp.vcxproj", "{4007E54E-5387-401B-85BB-B1ADBB6F92CF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomerManagementAppService", "CustomerManagementAppService\CustomerManagementAppService.vcxproj", "{91C1D831-3919-4A49-AFE2-2938DCBD96FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -41,6 +43,22 @@ Global
 		{4007E54E-5387-401B-85BB-B1ADBB6F92CF}.Release|x86.ActiveCfg = Release|Win32
 		{4007E54E-5387-401B-85BB-B1ADBB6F92CF}.Release|x86.Build.0 = Release|Win32
 		{4007E54E-5387-401B-85BB-B1ADBB6F92CF}.Release|x86.Deploy.0 = Release|Win32
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|ARM.Build.0 = Debug|ARM
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|ARM64.Build.0 = Debug|ARM64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|x64.ActiveCfg = Debug|x64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|x64.Build.0 = Debug|x64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|x86.ActiveCfg = Debug|Win32
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Debug|x86.Build.0 = Debug|Win32
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|ARM.ActiveCfg = Release|ARM
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|ARM.Build.0 = Release|ARM
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|ARM64.ActiveCfg = Release|ARM64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|ARM64.Build.0 = Release|ARM64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|x64.ActiveCfg = Release|x64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|x64.Build.0 = Release|x64
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|x86.ActiveCfg = Release|Win32
+		{91C1D831-3919-4A49-AFE2-2938DCBD96FC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

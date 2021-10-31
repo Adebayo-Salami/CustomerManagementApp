@@ -1,0 +1,10 @@
+namespace CustomerManagementAppService
+{
+    [bindable]
+    [default_interface]
+    runtimeclass User 
+    {
+        User();
+        Boolean Authenticate(String username, String password, Int64 companyID, User userInfo);
+    }
+}

@@ -226,6 +226,11 @@
     </ClCompile>
     <ClCompile Include="User.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerManagementAppService\CustomerManagementAppService.vcxproj">
+      <Project>{91c1d831-3919-4a49-afe2-2938dcbd96fc}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

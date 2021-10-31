@@ -1,2 +1,2 @@
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\CustomerManagementApp.vcxproj;x86
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerServ\CustomerServ.vcxproj;x86
+C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\CustomerManagementAppService.vcxproj;x86
