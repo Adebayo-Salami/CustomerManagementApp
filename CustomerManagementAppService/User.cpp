@@ -6,7 +6,12 @@
 
 namespace winrt::CustomerManagementAppService::implementation
 {
-    bool User::Authenticate(hstring const& username, hstring const& password, int64_t companyID, winrt::CustomerManagementAppService::User const& userInfo)
+    int32_t User::MyProperty()
+    {
+        throw hresult_not_implemented();
+    }
+
+    void User::MyProperty(int32_t /*value*/)
     {
         throw hresult_not_implemented();
     }

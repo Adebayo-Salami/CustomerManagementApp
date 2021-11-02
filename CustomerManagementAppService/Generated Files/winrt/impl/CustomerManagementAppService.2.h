@@ -6,19 +6,6 @@
 #include "winrt/impl/CustomerManagementAppService.1.h"
 WINRT_EXPORT namespace winrt::CustomerManagementAppService
 {
-    struct __declspec(empty_bases) Company : winrt::CustomerManagementAppService::ICompany
-    {
-        Company(std::nullptr_t) noexcept {}
-        Company(void* ptr, take_ownership_from_abi_t) noexcept : winrt::CustomerManagementAppService::ICompany(ptr, take_ownership_from_abi) {}
-        Company();
-    };
-    struct __declspec(empty_bases) Customer : winrt::CustomerManagementAppService::ICustomer
-    {
-        Customer(std::nullptr_t) noexcept {}
-        Customer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::CustomerManagementAppService::ICustomer(ptr, take_ownership_from_abi) {}
-        Customer();
-        Customer(param::hstring const& email, param::hstring const& mobile, param::hstring const& fullname);
-    };
     struct __declspec(empty_bases) User : winrt::CustomerManagementAppService::IUser
     {
         User(std::nullptr_t) noexcept {}

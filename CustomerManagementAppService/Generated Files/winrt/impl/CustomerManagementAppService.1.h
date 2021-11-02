@@ -6,27 +6,6 @@
 #include "winrt/impl/CustomerManagementAppService.0.h"
 WINRT_EXPORT namespace winrt::CustomerManagementAppService
 {
-    struct __declspec(empty_bases) ICompany :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<ICompany>
-    {
-        ICompany(std::nullptr_t = nullptr) noexcept {}
-        ICompany(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) ICustomer :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<ICustomer>
-    {
-        ICustomer(std::nullptr_t = nullptr) noexcept {}
-        ICustomer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) ICustomerFactory :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<ICustomerFactory>
-    {
-        ICustomerFactory(std::nullptr_t = nullptr) noexcept {}
-        ICustomerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IUser :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUser>

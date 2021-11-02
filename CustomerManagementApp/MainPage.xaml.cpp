@@ -29,8 +29,7 @@ MainPage::MainPage()
 
 void CustomerManagementApp::MainPage::Btn_AddCustomer(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	CustomerManagementAppService::User user();
-	
+	//auto isLoggedIn = user().Authenticate()
 	MessageDialog mesageDialogue("C++ -- Customer Added Succesfully! -- ");
 	mesageDialogue.ShowAsync();
 }

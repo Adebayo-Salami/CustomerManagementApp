@@ -8,8 +8,8 @@
     <Filter Include="Generated Files">
       <UniqueIdentifier>{926ab91d-31b4-48c3-b9a4-e681349f27f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Services">
-      <UniqueIdentifier>{48dd42ea-d71f-4536-b310-20961b1d21a5}</UniqueIdentifier>
+    <Filter Include="Model">
+      <UniqueIdentifier>{d75cfc07-ac9c-4879-a53c-3e472363cd86}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,14 +30,8 @@
     <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Customer.idl">
-      <Filter>Services</Filter>
-    </Midl>
     <Midl Include="User.idl">
-      <Filter>Services</Filter>
-    </Midl>
-    <Midl Include="Company.idl">
-      <Filter>Services</Filter>
+      <Filter>Model</Filter>
     </Midl>
   </ItemGroup>
 </Project>

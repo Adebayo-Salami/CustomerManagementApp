@@ -25,6 +25,4 @@ C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagement
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\ProjectArchitectures.txt
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\.winmd_cache\$CustomerServ.winmd_637710368385587129.json
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\CustomerManagementApp.vcxproj.CopyComplete
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\CustomerManagementAppService.pri.xml
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Debug\.winmd_cache\$CustomerManagementAppService.winmd_637713084271960155.json

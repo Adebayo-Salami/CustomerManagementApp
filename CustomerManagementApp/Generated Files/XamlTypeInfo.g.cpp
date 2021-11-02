@@ -71,60 +71,32 @@ struct TypeInfo
 const TypeInfo TypeInfos[] = 
 {
     //   0
-    L"Object", L"",
-    nullptr, nullptr, nullptr, nullptr,
-    -1,
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
-    TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
-    -1,
-    //   1
     L"Windows.UI.Xaml.Controls.Page", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
     -1,
-    //   2
+    //   1
     L"CustomerManagementApp.MainPage", L"",
     &ActivateType<::CustomerManagementApp::MainPage>, nullptr, nullptr, nullptr,
-    1, // Windows.UI.Xaml.Controls.Page
+    0, // Windows.UI.Xaml.Controls.Page
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
+    -1,
+    //   2
+    L"CustomerManagementApp.Dashboard", L"",
+    &ActivateType<::CustomerManagementApp::Dashboard>, nullptr, nullptr, nullptr,
+    0, // Windows.UI.Xaml.Controls.Page
     0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
     TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
     -1,
     //   3
-    L"CustomerManagementApp.Dashboard", L"",
-    &ActivateType<::CustomerManagementApp::Dashboard>, nullptr, nullptr, nullptr,
-    1, // Windows.UI.Xaml.Controls.Page
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
-    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
-    -1,
-    //   4
-    L"CustomerManagementAppService.User", L"",
-    &ActivateType<::CustomerManagementAppService::User>, nullptr, nullptr, nullptr,
-    0, // Object
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
-    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
-    -1,
-    //   5
     L"Windows.UI.Xaml.Controls.UserControl", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
-    -1,
-    //   6
-    L"CustomerManagementAppService.Company", L"",
-    &ActivateType<::CustomerManagementAppService::Company>, nullptr, nullptr, nullptr,
-    0, // Object
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
-    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
-    -1,
-    //   7
-    L"CustomerManagementAppService.Customer", L"",
-    &ActivateType<::CustomerManagementAppService::Customer>, nullptr, nullptr, nullptr,
-    0, // Object
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
-    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
     -1,
     //  Last type here is for padding
     L"", L"",
@@ -142,38 +114,37 @@ const UINT TypeInfoLookup[] = {
       0,   //   4
       0,   //   5
       0,   //   6
-      1,   //   7
-      1,   //   8
-      1,   //   9
-      1,   //  10
-      1,   //  11
-      1,   //  12
-      1,   //  13
-      1,   //  14
-      1,   //  15
-      1,   //  16
-      1,   //  17
-      1,   //  18
-      1,   //  19
-      1,   //  20
-      1,   //  21
-      1,   //  22
-      1,   //  23
-      1,   //  24
-      1,   //  25
-      1,   //  26
-      1,   //  27
-      1,   //  28
-      1,   //  29
-      2,   //  30
-      3,   //  31
-      4,   //  32
-      4,   //  33
-      5,   //  34
-      5,   //  35
-      5,   //  36
-      7,   //  37
-      8,   //  38
+      0,   //   7
+      0,   //   8
+      0,   //   9
+      0,   //  10
+      0,   //  11
+      0,   //  12
+      0,   //  13
+      0,   //  14
+      0,   //  15
+      0,   //  16
+      0,   //  17
+      0,   //  18
+      0,   //  19
+      0,   //  20
+      0,   //  21
+      0,   //  22
+      0,   //  23
+      0,   //  24
+      0,   //  25
+      0,   //  26
+      0,   //  27
+      0,   //  28
+      0,   //  29
+      1,   //  30
+      2,   //  31
+      3,   //  32
+      3,   //  33
+      3,   //  34
+      3,   //  35
+      3,   //  36
+      4,   //  37
 };
 
 const TypeInfo* GetTypeInfo(::Platform::String^ typeName)

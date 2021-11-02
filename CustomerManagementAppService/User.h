@@ -8,7 +8,8 @@ namespace winrt::CustomerManagementAppService::implementation
     {
         User() = default;
 
-        bool Authenticate(hstring const& username, hstring const& password, int64_t companyID, winrt::CustomerManagementAppService::User const& userInfo);
+        int32_t MyProperty();
+        void MyProperty(int32_t value);
     };
 }
 

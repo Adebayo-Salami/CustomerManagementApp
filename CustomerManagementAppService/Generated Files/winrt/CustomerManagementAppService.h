@@ -9,69 +9,30 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.211028.7"), "Mismatche
 #include "winrt/impl/CustomerManagementAppService.2.h"
 namespace winrt::impl
 {
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_CustomerManagementAppService_ICompany<D>::AddCompany(param::hstring const& companyName, param::hstring const& companyLocation) const
+    template <typename D> WINRT_IMPL_AUTO(int32_t) consume_CustomerManagementAppService_IUser<D>::MyProperty() const
     {
-        bool result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::ICompany)->AddCompany(*(void**)(&companyName), *(void**)(&companyLocation), &result));
-        return result;
+        int32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->get_MyProperty(&value));
+        return value;
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_ICustomer<D>::AddCustomer(winrt::CustomerManagementAppService::Customer const& customer) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::MyProperty(int32_t value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::ICustomer)->AddCustomer(*(void**)(&customer)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->put_MyProperty(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::Customer) consume_CustomerManagementAppService_ICustomerFactory<D>::CreateInstance(param::hstring const& email, param::hstring const& mobile, param::hstring const& fullname) const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::ICustomerFactory)->CreateInstance(*(void**)(&email), *(void**)(&mobile), *(void**)(&fullname), &value));
-        return winrt::CustomerManagementAppService::Customer{ value, take_ownership_from_abi };
-    }
-    template <typename D> WINRT_IMPL_AUTO(bool) consume_CustomerManagementAppService_IUser<D>::Authenticate(param::hstring const& username, param::hstring const& password, int64_t companyID, winrt::CustomerManagementAppService::User const& userInfo) const
-    {
-        bool result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->Authenticate(*(void**)(&username), *(void**)(&password), companyID, *(void**)(&userInfo), &result));
-        return result;
-    }
-    template <typename D>
-    struct produce<D, winrt::CustomerManagementAppService::ICompany> : produce_base<D, winrt::CustomerManagementAppService::ICompany>
-    {
-        int32_t __stdcall AddCompany(void* companyName, void* companyLocation, bool* result) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<bool>(this->shim().AddCompany(*reinterpret_cast<hstring const*>(&companyName), *reinterpret_cast<hstring const*>(&companyLocation)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-    template <typename D>
-    struct produce<D, winrt::CustomerManagementAppService::ICustomer> : produce_base<D, winrt::CustomerManagementAppService::ICustomer>
-    {
-        int32_t __stdcall AddCustomer(void* customer) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().AddCustomer(*reinterpret_cast<winrt::CustomerManagementAppService::Customer const*>(&customer));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-    template <typename D>
-    struct produce<D, winrt::CustomerManagementAppService::ICustomerFactory> : produce_base<D, winrt::CustomerManagementAppService::ICustomerFactory>
-    {
-        int32_t __stdcall CreateInstance(void* email, void* mobile, void* fullname, void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::CustomerManagementAppService::Customer>(this->shim().CreateInstance(*reinterpret_cast<hstring const*>(&email), *reinterpret_cast<hstring const*>(&mobile), *reinterpret_cast<hstring const*>(&fullname)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
     template <typename D>
     struct produce<D, winrt::CustomerManagementAppService::IUser> : produce_base<D, winrt::CustomerManagementAppService::IUser>
     {
-        int32_t __stdcall Authenticate(void* username, void* password, int64_t companyID, void* userInfo, bool* result) noexcept final try
+        int32_t __stdcall get_MyProperty(int32_t* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<bool>(this->shim().Authenticate(*reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), companyID, *reinterpret_cast<winrt::CustomerManagementAppService::User const*>(&userInfo)));
+            *value = detach_from<int32_t>(this->shim().MyProperty());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_MyProperty(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MyProperty(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -83,12 +44,7 @@ WINRT_EXPORT namespace winrt::CustomerManagementAppService
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
-    template<> struct hash<winrt::CustomerManagementAppService::ICompany> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::CustomerManagementAppService::ICustomer> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::CustomerManagementAppService::ICustomerFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::CustomerManagementAppService::IUser> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::CustomerManagementAppService::Company> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::CustomerManagementAppService::Customer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::CustomerManagementAppService::User> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format

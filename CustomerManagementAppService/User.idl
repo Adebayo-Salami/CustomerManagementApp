@@ -5,6 +5,10 @@ namespace CustomerManagementAppService
     runtimeclass User 
     {
         User();
-        Boolean Authenticate(String username, String password, Int64 companyID, User userInfo);
+
+        Int32 Id;
+        String Username;
+        String Password;
+        Int64 CompanyID;
     }
 }

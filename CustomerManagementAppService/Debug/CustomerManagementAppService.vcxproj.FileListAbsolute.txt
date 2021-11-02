@@ -1,6 +1,5 @@
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.winmd
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.pri
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\CustomerManagementAppService.vcxproj.AssemblyReference.cache
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\CustomerManagementAppService.vcxproj.MdMergeInputs.cache
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\CustomerManagementAppService.vcxproj.cppwinrt_plat.cache
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\CustomerManagementAppService.vcxproj.cppwinrt_comp.cache

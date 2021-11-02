@@ -116,14 +116,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Company.h">
-      <DependentUpon>Company.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
-    <ClInclude Include="Customer.h">
-      <DependentUpon>Customer.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="User.h">
       <DependentUpon>User.idl</DependentUpon>
@@ -131,14 +123,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Company.cpp">
-      <DependentUpon>Company.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
-    <ClCompile Include="Customer.cpp">
-      <DependentUpon>Customer.idl</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -159,12 +143,6 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Company.idl">
-      <SubType>Designer</SubType>
-    </Midl>
-    <Midl Include="Customer.idl">
-      <SubType>Designer</SubType>
-    </Midl>
     <Midl Include="User.idl">
       <SubType>Designer</SubType>
     </Midl>
