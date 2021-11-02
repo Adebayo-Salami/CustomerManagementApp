@@ -2,55 +2,40 @@ c:\users\osalami\documents\applications\customermanagementapp\customermanagement
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\vc142.pdb
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\vc142.idb
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\pch.obj
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\module.g.obj
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\user.obj
-c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.winmd
-c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.lib
-c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.exp
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.mdmergeinputs.cache
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.cppwinrt_plat.cache
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.cppwinrt_comp.cache
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\priconfig.xml
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\priconfig.xml.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\unfiltered.layout.resfiles
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\unfiltered.layout.resfiles.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\filtered.layout.resfiles
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\filtered.layout.resfiles.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\excluded.layout.resfiles
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\excluded.layout.resfiles.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\resources.resfiles
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\resources.resfiles.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\pri.resfiles
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\pri.resfiles.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.pri
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\qualifiers.txt
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\qualifiers.txt.intermediate
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\multiplequalifiersperdimensionfound.txt
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.ilk
-c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.dll
-c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.pdb
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\userservice.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\resultvm.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\module.g.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\unmerged\resultvm.winmd
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\unmerged\authuserresultvm.winmd
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\unmerged\user.winmd
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\unmerged\userservice.winmd
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.cppwinrt_comp.cache
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.cppwinrt_plat.cache
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.mdmergeinputs.cache
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.cppwinrt_comp.rsp
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.cppwinrt_plat.rsp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.mdmerge.rsp
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customermanagementappservice.vcxproj.midlrt.rsp
+c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementappservice\customermanagementappservice.pdb
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\cl.command.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\cl.read.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\cl.write.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\customermanagementappservice.read.1u.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\customermanagementappservice.write.1u.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\link.command.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\link.read.1.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\link.read.2.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\link.write.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt-cl.14204.read.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt-cl.19400.read.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt-cl.20616.read.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt-cl.632.read.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt-cl.940.read.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt-cl.read.1.tlog
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt.read.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl-midlrt.write.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl.command.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\debug\customer.91c1d831.tlog\midl.read.1.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\authuserresultvm.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\resultvm.g.h
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\user.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\userresultvm.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\userservice.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\authuserresultvm.g.cpp
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\module.g.cpp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\resultvm.g.cpp
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\user.g.cpp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\userresultvm.g.cpp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementappservice\generated files\userservice.g.cpp

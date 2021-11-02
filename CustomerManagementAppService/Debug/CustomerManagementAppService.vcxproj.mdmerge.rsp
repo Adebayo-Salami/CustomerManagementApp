@@ -28,5 +28,6 @@
 -metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.System.Profile.SystemManufacturers.SystemManufacturersContract\3.0.0.0\."
 -metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.System.SystemManagementContract\7.0.0.0\."
 -metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.UI.ViewManagement.ViewManagementViewScalingContract\1.0.0.0\."
--metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.UI.Xaml.Core.Direct.XamlDirectContract\2.0.0.0\." -i "Debug\Unmerged\User.winmd"
+-metadata_dir "C:\Program Files (x86)\Windows Kits\10\References\10.0.19041.0\Windows.UI.Xaml.Core.Direct.XamlDirectContract\2.0.0.0\." -i "Debug\Unmerged\AuthUserResultVM.winmd"
+-i "Debug\Unmerged\User.winmd"
 -i "Debug\Unmerged\UserService.winmd" -o "Debug\Merged" -partial -n:1

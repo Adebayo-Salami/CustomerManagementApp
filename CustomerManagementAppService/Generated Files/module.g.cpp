@@ -2,6 +2,7 @@
 
 #include "pch.h"
 #include "winrt/base.h"
+void* winrt_make_CustomerManagementAppService_AuthUserResultVM();
 void* winrt_make_CustomerManagementAppService_User();
 void* winrt_make_CustomerManagementAppService_UserService();
 
@@ -22,6 +23,11 @@ void* __stdcall winrt_get_activation_factory([[maybe_unused]] std::wstring_view 
     {
         return std::equal(left.rbegin(), left.rend(), right.rbegin(), right.rend());
     };
+
+    if (requal(name, L"CustomerManagementAppService.AuthUserResultVM"))
+    {
+        return winrt_make_CustomerManagementAppService_AuthUserResultVM();
+    }
 
     if (requal(name, L"CustomerManagementAppService.User"))
     {

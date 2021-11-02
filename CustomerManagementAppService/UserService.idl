@@ -1,4 +1,4 @@
-import "User.idl";
+import "AuthUserResultVM.idl";
 
 namespace CustomerManagementAppService
 {
@@ -7,6 +7,7 @@ namespace CustomerManagementAppService
     runtimeclass UserService 
     {
         UserService();
-        User GetUserByID(Int32 Id);
+        AuthUserResultVM GetUserByID(Int32 Id);
+        AuthUserResultVM AuthenticateUser(String username, String password, Int64 companyId);
     }
 }

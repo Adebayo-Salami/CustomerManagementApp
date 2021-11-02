@@ -9,6 +9,36 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.211028.7"), "Mismatche
 #include "winrt/impl/CustomerManagementAppService.2.h"
 namespace winrt::impl
 {
+    template <typename D> WINRT_IMPL_AUTO(bool) consume_CustomerManagementAppService_IAuthUserResultVM<D>::IsSuccessful() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IAuthUserResultVM)->get_IsSuccessful(&value));
+        return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IAuthUserResultVM<D>::IsSuccessful(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IAuthUserResultVM)->put_IsSuccessful(value));
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_CustomerManagementAppService_IAuthUserResultVM<D>::Message() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IAuthUserResultVM)->get_Message(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IAuthUserResultVM<D>::Message(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IAuthUserResultVM)->put_Message(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::User) consume_CustomerManagementAppService_IAuthUserResultVM<D>::UserInfo() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IAuthUserResultVM)->get_UserInfo(&value));
+        return winrt::CustomerManagementAppService::User{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IAuthUserResultVM<D>::UserInfo(winrt::CustomerManagementAppService::User const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IAuthUserResultVM)->put_UserInfo(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(int32_t) consume_CustomerManagementAppService_IUser<D>::Id() const
     {
         int32_t value{};
@@ -49,12 +79,66 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->put_CompanyID(value));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::User) consume_CustomerManagementAppService_IUserService<D>::GetUserByID(int32_t Id) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::GetUserByID(int32_t Id) const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->GetUserByID(Id, &result));
-        return winrt::CustomerManagementAppService::User{ result, take_ownership_from_abi };
+        return winrt::CustomerManagementAppService::AuthUserResultVM{ result, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::AuthenticateUser(param::hstring const& username, param::hstring const& password, int64_t companyId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->AuthenticateUser(*(void**)(&username), *(void**)(&password), companyId, &result));
+        return winrt::CustomerManagementAppService::AuthUserResultVM{ result, take_ownership_from_abi };
+    }
+    template <typename D>
+    struct produce<D, winrt::CustomerManagementAppService::IAuthUserResultVM> : produce_base<D, winrt::CustomerManagementAppService::IAuthUserResultVM>
+    {
+        int32_t __stdcall get_IsSuccessful(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsSuccessful());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IsSuccessful(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IsSuccessful(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Message(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Message());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Message(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Message(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_UserInfo(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::CustomerManagementAppService::User>(this->shim().UserInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_UserInfo(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().UserInfo(*reinterpret_cast<winrt::CustomerManagementAppService::User const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
     template <typename D>
     struct produce<D, winrt::CustomerManagementAppService::IUser> : produce_base<D, winrt::CustomerManagementAppService::IUser>
     {
@@ -124,7 +208,15 @@ namespace winrt::impl
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::CustomerManagementAppService::User>(this->shim().GetUserByID(Id));
+            *result = detach_from<winrt::CustomerManagementAppService::AuthUserResultVM>(this->shim().GetUserByID(Id));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall AuthenticateUser(void* username, void* password, int64_t companyId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::CustomerManagementAppService::AuthUserResultVM>(this->shim().AuthenticateUser(*reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), companyId));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -136,8 +228,10 @@ WINRT_EXPORT namespace winrt::CustomerManagementAppService
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::CustomerManagementAppService::IAuthUserResultVM> : winrt::impl::hash_base {};
     template<> struct hash<winrt::CustomerManagementAppService::IUser> : winrt::impl::hash_base {};
     template<> struct hash<winrt::CustomerManagementAppService::IUserService> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::CustomerManagementAppService::AuthUserResultVM> : winrt::impl::hash_base {};
     template<> struct hash<winrt::CustomerManagementAppService::User> : winrt::impl::hash_base {};
     template<> struct hash<winrt::CustomerManagementAppService::UserService> : winrt::impl::hash_base {};
 #endif

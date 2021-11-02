@@ -1,0 +1,14 @@
+import "User.idl";
+
+namespace CustomerManagementAppService
+{
+    [bindable]
+    [default_interface]
+    runtimeclass AuthUserResultVM 
+    {
+        AuthUserResultVM();
+        Boolean IsSuccessful;
+        String Message;
+        User UserInfo;
+    }
+}

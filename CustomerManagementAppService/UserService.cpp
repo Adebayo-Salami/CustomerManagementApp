@@ -6,7 +6,11 @@
 
 namespace winrt::CustomerManagementAppService::implementation
 {
-    winrt::CustomerManagementAppService::User UserService::GetUserByID(int32_t Id)
+    winrt::CustomerManagementAppService::AuthUserResultVM UserService::GetUserByID(int32_t Id)
+    {
+        throw hresult_not_implemented();
+    }
+    winrt::CustomerManagementAppService::AuthUserResultVM UserService::AuthenticateUser(hstring const& username, hstring const& password, int64_t companyId)
     {
         throw hresult_not_implemented();
     }

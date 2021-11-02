@@ -14,6 +14,12 @@
     <Filter Include="Service">
       <UniqueIdentifier>{0083e82d-e6a1-4ac3-a7b5-c5757f6b5e73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ViewModel">
+      <UniqueIdentifier>{3ebf65a9-b2ee-4de6-8054-2a89c343ab1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewModel\User">
+      <UniqueIdentifier>{bc531240-f44d-451b-9e96-c302e850b912}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -38,6 +44,9 @@
     </Midl>
     <Midl Include="UserService.idl">
       <Filter>Service</Filter>
+    </Midl>
+    <Midl Include="AuthUserResultVM.idl">
+      <Filter>ViewModel\User</Filter>
     </Midl>
   </ItemGroup>
 </Project>

@@ -6,6 +6,13 @@
 #include "winrt/impl/CustomerManagementAppService.0.h"
 WINRT_EXPORT namespace winrt::CustomerManagementAppService
 {
+    struct __declspec(empty_bases) IAuthUserResultVM :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAuthUserResultVM>
+    {
+        IAuthUserResultVM(std::nullptr_t = nullptr) noexcept {}
+        IAuthUserResultVM(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IUser :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUser>
