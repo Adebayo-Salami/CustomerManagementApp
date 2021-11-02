@@ -1,0 +1,12 @@
+import "User.idl";
+
+namespace CustomerManagementAppService
+{
+    [bindable]
+    [default_interface]
+    runtimeclass UserService 
+    {
+        UserService();
+        User GetUserByID(Int32 Id);
+    }
+}

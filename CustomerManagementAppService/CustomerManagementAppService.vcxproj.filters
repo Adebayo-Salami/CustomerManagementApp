@@ -11,6 +11,9 @@
     <Filter Include="Model">
       <UniqueIdentifier>{d75cfc07-ac9c-4879-a53c-3e472363cd86}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Service">
+      <UniqueIdentifier>{0083e82d-e6a1-4ac3-a7b5-c5757f6b5e73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -32,6 +35,9 @@
   <ItemGroup>
     <Midl Include="User.idl">
       <Filter>Model</Filter>
+    </Midl>
+    <Midl Include="UserService.idl">
+      <Filter>Service</Filter>
     </Midl>
   </ItemGroup>
 </Project>

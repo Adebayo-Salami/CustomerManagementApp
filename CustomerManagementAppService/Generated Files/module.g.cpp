@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "winrt/base.h"
 void* winrt_make_CustomerManagementAppService_User();
+void* winrt_make_CustomerManagementAppService_UserService();
 
 bool __stdcall winrt_can_unload_now() noexcept
 {
@@ -25,6 +26,11 @@ void* __stdcall winrt_get_activation_factory([[maybe_unused]] std::wstring_view 
     if (requal(name, L"CustomerManagementAppService.User"))
     {
         return winrt_make_CustomerManagementAppService_User();
+    }
+
+    if (requal(name, L"CustomerManagementAppService.UserService"))
+    {
+        return winrt_make_CustomerManagementAppService_UserService();
     }
 
     return nullptr;

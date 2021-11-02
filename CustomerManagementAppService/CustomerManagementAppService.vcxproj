@@ -121,6 +121,10 @@
       <DependentUpon>User.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="UserService.h">
+      <DependentUpon>UserService.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -129,6 +133,10 @@
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
     <ClCompile Include="User.cpp">
       <DependentUpon>User.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="UserService.cpp">
+      <DependentUpon>UserService.idl</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
   </ItemGroup>
@@ -144,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Midl Include="User.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="UserService.idl">
       <SubType>Designer</SubType>
     </Midl>
   </ItemGroup>
