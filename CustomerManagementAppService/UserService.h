@@ -2,6 +2,8 @@
 
 #include "UserService.g.h"
 
+//using namespace MySql::Data;
+
 namespace winrt::CustomerManagementAppService::implementation
 {
     struct UserService : UserServiceT<UserService>
