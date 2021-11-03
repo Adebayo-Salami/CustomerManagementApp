@@ -11,4 +11,21 @@ namespace winrt::CustomerManagementAppService::implementation
     {
         
     }
+
+    int64_t User::GetId()
+    {
+        return Id;
+    }
+    hstring User::GetUsername()
+    {
+        return Username;
+    }
+    hstring User::GetPassword()
+    {
+        return Password;
+    }
+    int64_t User::GetCompanyId()
+    {
+        return CompanyId;
+    }
 }

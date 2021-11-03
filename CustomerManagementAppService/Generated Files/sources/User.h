@@ -27,6 +27,10 @@ namespace winrt::CustomerManagementAppService::implementation
         User() = default;
 
         User(int32_t id, hstring const& username, hstring const& password, int64_t companyId);
+        int64_t GetId();
+        hstring GetUsername();
+        hstring GetPassword();
+        int64_t GetCompanyId();
     };
 }
 namespace winrt::CustomerManagementAppService::factory_implementation

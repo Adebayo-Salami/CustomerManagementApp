@@ -27,4 +27,20 @@ namespace winrt::CustomerManagementAppService::implementation
     {
         throw hresult_not_implemented();
     }
+    int64_t User::GetId()
+    {
+        throw hresult_not_implemented();
+    }
+    hstring User::GetUsername()
+    {
+        throw hresult_not_implemented();
+    }
+    hstring User::GetPassword()
+    {
+        throw hresult_not_implemented();
+    }
+    int64_t User::GetCompanyId()
+    {
+        throw hresult_not_implemented();
+    }
 }

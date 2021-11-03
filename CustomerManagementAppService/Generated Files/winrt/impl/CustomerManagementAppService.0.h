@@ -30,7 +30,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IUserFactory> = L"CustomerManagementAppService.IUserFactory";
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IUserService> = L"CustomerManagementAppService.IUserService";
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IAuthUserResultVM>{ 0x7E6BFD78,0x6255,0x5F24,{ 0xAC,0x3F,0x57,0x2D,0x2A,0x30,0x56,0x63 } }; // 7E6BFD78-6255-5F24-AC3F-572D2A305663
-    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUser>{ 0xEEBDD24F,0x2CC0,0x5011,{ 0xA2,0x3D,0xDC,0x09,0xD2,0x6F,0xD1,0x29 } }; // EEBDD24F-2CC0-5011-A23D-DC09D26FD129
+    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUser>{ 0x276B72AD,0x3FE2,0x5A28,{ 0xA5,0x79,0xF4,0x10,0xB3,0x6D,0x33,0x1B } }; // 276B72AD-3FE2-5A28-A579-F410B36D331B
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUserFactory>{ 0xAEDED7B0,0x1057,0x5862,{ 0xB1,0xAC,0x91,0xC4,0xF6,0x09,0x8C,0x61 } }; // AEDED7B0-1057-5862-B1AC-91C4F6098C61
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUserService>{ 0xEA3CA911,0x38EE,0x5D72,{ 0x96,0xA1,0xC7,0x4E,0x28,0x09,0x7A,0xF6 } }; // EA3CA911-38EE-5D72-96A1-C74E28097AF6
     template <> struct default_interface<winrt::CustomerManagementAppService::AuthUserResultVM>{ using type = winrt::CustomerManagementAppService::IAuthUserResultVM; };
@@ -52,6 +52,10 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
+            virtual int32_t __stdcall get_GetId(int64_t*) noexcept = 0;
+            virtual int32_t __stdcall get_GetUsername(void**) noexcept = 0;
+            virtual int32_t __stdcall get_GetPassword(void**) noexcept = 0;
+            virtual int32_t __stdcall get_GetCompanyId(int64_t*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::CustomerManagementAppService::IUserFactory>
@@ -87,6 +91,10 @@ namespace winrt::impl
     template <typename D>
     struct consume_CustomerManagementAppService_IUser
     {
+        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) GetId() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) GetUsername() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) GetPassword() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) GetCompanyId() const;
     };
     template <> struct consume<winrt::CustomerManagementAppService::IUser>
     {

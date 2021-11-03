@@ -6,5 +6,9 @@ namespace CustomerManagementAppService
     {
         User();
         User(Int32 id, String username, String password, Int64 companyId);
+        Int64 GetId{ get; };
+        String GetUsername{ get; };
+        String GetPassword{ get; };
+        Int64 GetCompanyId{ get; };
     }
 }

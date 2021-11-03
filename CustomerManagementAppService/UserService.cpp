@@ -23,6 +23,7 @@ namespace winrt::CustomerManagementAppService::implementation
         string line;
         if (UserDatabaseFile.is_open()) {
             while (getline(UserDatabaseFile, line)) {
+                User user(1, L"Name", L"Wherew", 4);
                 
             }
         }
