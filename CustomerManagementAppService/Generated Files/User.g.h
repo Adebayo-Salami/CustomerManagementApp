@@ -21,7 +21,7 @@ namespace winrt::CustomerManagementAppService::implementation
 namespace winrt::CustomerManagementAppService::factory_implementation
 {
     template <typename D, typename T, typename... I>
-    struct __declspec(empty_bases) UserT : implements<D, winrt::Windows::Foundation::IActivationFactory, I...>
+    struct __declspec(empty_bases) UserT : implements<D, winrt::Windows::Foundation::IActivationFactory, winrt::CustomerManagementAppService::IUserFactory, I...>
     {
         using instance_type = CustomerManagementAppService::User;
 
@@ -32,6 +32,10 @@ namespace winrt::CustomerManagementAppService::factory_implementation
         auto ActivateInstance() const
         {
             return make<T>();
+        }
+        auto CreateInstance(int32_t id, hstring const& username, hstring const& password, int64_t companyId)
+        {
+            return make<T>(id, username, password, companyId);
         }
     };
 }

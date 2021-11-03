@@ -7,6 +7,7 @@ WINRT_EXPORT namespace winrt::CustomerManagementAppService
 {
     struct IAuthUserResultVM;
     struct IUser;
+    struct IUserFactory;
     struct IUserService;
     struct AuthUserResultVM;
     struct User;
@@ -16,6 +17,7 @@ namespace winrt::impl
 {
     template <> struct category<winrt::CustomerManagementAppService::IAuthUserResultVM>{ using type = interface_category; };
     template <> struct category<winrt::CustomerManagementAppService::IUser>{ using type = interface_category; };
+    template <> struct category<winrt::CustomerManagementAppService::IUserFactory>{ using type = interface_category; };
     template <> struct category<winrt::CustomerManagementAppService::IUserService>{ using type = interface_category; };
     template <> struct category<winrt::CustomerManagementAppService::AuthUserResultVM>{ using type = class_category; };
     template <> struct category<winrt::CustomerManagementAppService::User>{ using type = class_category; };
@@ -25,9 +27,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::UserService> = L"CustomerManagementAppService.UserService";
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IAuthUserResultVM> = L"CustomerManagementAppService.IAuthUserResultVM";
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IUser> = L"CustomerManagementAppService.IUser";
+    template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IUserFactory> = L"CustomerManagementAppService.IUserFactory";
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IUserService> = L"CustomerManagementAppService.IUserService";
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IAuthUserResultVM>{ 0x7E6BFD78,0x6255,0x5F24,{ 0xAC,0x3F,0x57,0x2D,0x2A,0x30,0x56,0x63 } }; // 7E6BFD78-6255-5F24-AC3F-572D2A305663
-    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUser>{ 0x906CDA73,0xB8E2,0x5593,{ 0xA2,0x4E,0xB3,0x5A,0xDD,0x27,0xE0,0xB3 } }; // 906CDA73-B8E2-5593-A24E-B35ADD27E0B3
+    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUser>{ 0xEEBDD24F,0x2CC0,0x5011,{ 0xA2,0x3D,0xDC,0x09,0xD2,0x6F,0xD1,0x29 } }; // EEBDD24F-2CC0-5011-A23D-DC09D26FD129
+    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUserFactory>{ 0xAEDED7B0,0x1057,0x5862,{ 0xB1,0xAC,0x91,0xC4,0xF6,0x09,0x8C,0x61 } }; // AEDED7B0-1057-5862-B1AC-91C4F6098C61
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUserService>{ 0xEA3CA911,0x38EE,0x5D72,{ 0x96,0xA1,0xC7,0x4E,0x28,0x09,0x7A,0xF6 } }; // EA3CA911-38EE-5D72-96A1-C74E28097AF6
     template <> struct default_interface<winrt::CustomerManagementAppService::AuthUserResultVM>{ using type = winrt::CustomerManagementAppService::IAuthUserResultVM; };
     template <> struct default_interface<winrt::CustomerManagementAppService::User>{ using type = winrt::CustomerManagementAppService::IUser; };
@@ -48,14 +52,13 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall get_Id(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall put_Id(int32_t) noexcept = 0;
-            virtual int32_t __stdcall get_Username(void**) noexcept = 0;
-            virtual int32_t __stdcall put_Username(void*) noexcept = 0;
-            virtual int32_t __stdcall get_Password(void**) noexcept = 0;
-            virtual int32_t __stdcall put_Password(void*) noexcept = 0;
-            virtual int32_t __stdcall get_CompanyID(int64_t*) noexcept = 0;
-            virtual int32_t __stdcall put_CompanyID(int64_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::CustomerManagementAppService::IUserFactory>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(int32_t, void*, void*, int64_t, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::CustomerManagementAppService::IUserService>
@@ -84,18 +87,19 @@ namespace winrt::impl
     template <typename D>
     struct consume_CustomerManagementAppService_IUser
     {
-        [[nodiscard]] WINRT_IMPL_AUTO(int32_t) Id() const;
-        WINRT_IMPL_AUTO(void) Id(int32_t value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Username() const;
-        WINRT_IMPL_AUTO(void) Username(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(hstring) Password() const;
-        WINRT_IMPL_AUTO(void) Password(param::hstring const& value) const;
-        [[nodiscard]] WINRT_IMPL_AUTO(int64_t) CompanyID() const;
-        WINRT_IMPL_AUTO(void) CompanyID(int64_t value) const;
     };
     template <> struct consume<winrt::CustomerManagementAppService::IUser>
     {
         template <typename D> using type = consume_CustomerManagementAppService_IUser<D>;
+    };
+    template <typename D>
+    struct consume_CustomerManagementAppService_IUserFactory
+    {
+        WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::User) CreateInstance(int32_t id, param::hstring const& username, param::hstring const& password, int64_t companyId) const;
+    };
+    template <> struct consume<winrt::CustomerManagementAppService::IUserFactory>
+    {
+        template <typename D> using type = consume_CustomerManagementAppService_IUserFactory<D>;
     };
     template <typename D>
     struct consume_CustomerManagementAppService_IUserService

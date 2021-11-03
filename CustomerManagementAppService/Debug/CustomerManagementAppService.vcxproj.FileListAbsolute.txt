@@ -18,4 +18,3 @@ C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagement
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\qualifiers.txt
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\qualifiers.txt.intermediate
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\MultipleQualifiersPerDimensionFound.txt
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\Debug\CustomerManagementAppService.vcxproj.AssemblyReference.cache

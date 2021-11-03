@@ -6,36 +6,9 @@
 
 namespace winrt::CustomerManagementAppService::implementation
 {
-    int32_t User::Id()
+    User::User(int32_t id, hstring const& username, hstring const& password, int64_t companyId) 
+        : Id(id), Username(username), Password(password), CompanyId(companyId)
     {
-        throw hresult_not_implemented();
-    }
-    void User::Id(int32_t value)
-    {
-        throw hresult_not_implemented();
-    }
-    hstring User::Username()
-    {
-        throw hresult_not_implemented();
-    }
-    void User::Username(hstring const& value)
-    {
-        throw hresult_not_implemented();
-    }
-    hstring User::Password()
-    {
-        throw hresult_not_implemented();
-    }
-    void User::Password(hstring const& value)
-    {
-        throw hresult_not_implemented();
-    }
-    int64_t User::CompanyID()
-    {
-        throw hresult_not_implemented();
-    }
-    void User::CompanyID(int64_t value)
-    {
-        throw hresult_not_implemented();
+        
     }
 }

@@ -20,6 +20,13 @@ WINRT_EXPORT namespace winrt::CustomerManagementAppService
         IUser(std::nullptr_t = nullptr) noexcept {}
         IUser(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IUserFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IUserFactory>
+    {
+        IUserFactory(std::nullptr_t = nullptr) noexcept {}
+        IUserFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IUserService :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IUserService>

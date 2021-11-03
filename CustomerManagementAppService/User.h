@@ -2,20 +2,19 @@
 
 #include "User.g.h"
 
+using namespace std;
+
 namespace winrt::CustomerManagementAppService::implementation
 {
     struct User : UserT<User>
     {
-        User() = default;
+        User() : Id(0), Username(L""), Password(L""), CompanyId(0) {};
+        User(int32_t id, hstring const& username, hstring const& password, int64_t companyId);
 
-        int32_t Id();
-        void Id(int32_t value);
-        hstring Username();
-        void Username(hstring const& value);
-        hstring Password();
-        void Password(hstring const& value);
-        int64_t CompanyID();
-        void CompanyID(int64_t value);
+        long Id;
+        hstring Username;
+        hstring Password;
+        long CompanyId;
     };
 }
 
