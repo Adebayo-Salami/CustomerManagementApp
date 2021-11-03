@@ -28,6 +28,7 @@ namespace winrt::CustomerManagementAppService::implementation
 
         winrt::CustomerManagementAppService::AuthUserResultVM GetUserByID(int32_t Id);
         winrt::CustomerManagementAppService::AuthUserResultVM AuthenticateUser(hstring const& username, hstring const& password, int64_t companyId);
+        winrt::CustomerManagementAppService::AuthUserResultVM CreateUser(hstring const& username, hstring const& password, int64_t companyId);
     };
 }
 namespace winrt::CustomerManagementAppService::factory_implementation

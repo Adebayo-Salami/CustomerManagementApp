@@ -31,4 +31,8 @@ namespace winrt::CustomerManagementAppService::implementation
     {
         throw hresult_not_implemented();
     }
+    winrt::CustomerManagementAppService::AuthUserResultVM UserService::CreateUser(hstring const& username, hstring const& password, int64_t companyId)
+    {
+        throw hresult_not_implemented();
+    }
 }

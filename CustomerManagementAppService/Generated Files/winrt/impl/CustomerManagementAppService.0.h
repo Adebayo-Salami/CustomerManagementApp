@@ -28,7 +28,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::CustomerManagementAppService::IUserService> = L"CustomerManagementAppService.IUserService";
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IAuthUserResultVM>{ 0x7E6BFD78,0x6255,0x5F24,{ 0xAC,0x3F,0x57,0x2D,0x2A,0x30,0x56,0x63 } }; // 7E6BFD78-6255-5F24-AC3F-572D2A305663
     template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUser>{ 0x906CDA73,0xB8E2,0x5593,{ 0xA2,0x4E,0xB3,0x5A,0xDD,0x27,0xE0,0xB3 } }; // 906CDA73-B8E2-5593-A24E-B35ADD27E0B3
-    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUserService>{ 0xEBDF03F7,0x1CEF,0x58EC,{ 0xBD,0x0E,0xD4,0x47,0x48,0x5A,0x6E,0xC9 } }; // EBDF03F7-1CEF-58EC-BD0E-D447485A6EC9
+    template <> inline constexpr guid guid_v<winrt::CustomerManagementAppService::IUserService>{ 0xEA3CA911,0x38EE,0x5D72,{ 0x96,0xA1,0xC7,0x4E,0x28,0x09,0x7A,0xF6 } }; // EA3CA911-38EE-5D72-96A1-C74E28097AF6
     template <> struct default_interface<winrt::CustomerManagementAppService::AuthUserResultVM>{ using type = winrt::CustomerManagementAppService::IAuthUserResultVM; };
     template <> struct default_interface<winrt::CustomerManagementAppService::User>{ using type = winrt::CustomerManagementAppService::IUser; };
     template <> struct default_interface<winrt::CustomerManagementAppService::UserService>{ using type = winrt::CustomerManagementAppService::IUserService; };
@@ -64,6 +64,7 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall GetUserByID(int32_t, void**) noexcept = 0;
             virtual int32_t __stdcall AuthenticateUser(void*, void*, int64_t, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateUser(void*, void*, int64_t, void**) noexcept = 0;
         };
     };
     template <typename D>
@@ -101,6 +102,7 @@ namespace winrt::impl
     {
         WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) GetUserByID(int32_t Id) const;
         WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) AuthenticateUser(param::hstring const& username, param::hstring const& password, int64_t companyId) const;
+        WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) CreateUser(param::hstring const& username, param::hstring const& password, int64_t companyId) const;
     };
     template <> struct consume<winrt::CustomerManagementAppService::IUserService>
     {
