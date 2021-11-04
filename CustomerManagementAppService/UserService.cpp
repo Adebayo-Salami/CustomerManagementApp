@@ -18,15 +18,28 @@ namespace winrt::CustomerManagementAppService::implementation
 
     winrt::CustomerManagementAppService::AuthUserResultVM UserService::CreateUser(hstring const& username, hstring const& password, int64_t companyId)
     {
-        vector<User> users;
+        vector<User> users{};
         ifstream UserDatabaseFile(userTable);
         string line;
         if (UserDatabaseFile.is_open()) {
             while (getline(UserDatabaseFile, line)) {
-                User user(1, L"Name", L"Wherew", 4);
-                //user.GetId();
+                User user{};
+                int position;
+                std::string outstr, token;
+                std::vector<string> words{};
+                while ((position = line.find(",")) != std::string::npos) {
+                    token = line.substr(0, position);
+
+                    //Remove the extra space from the front of the splitted string
+                    words.push_back(token.erase(0, token.find_first_not_of(" ")));
+                    line.erase(0, position + line.length());
+                }
+
+                users.push_back(user);
             }
         }
+
+
 
         throw hresult_not_implemented();
     }
