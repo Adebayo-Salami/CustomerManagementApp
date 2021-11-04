@@ -18,7 +18,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\AppX</LayoutDir>
-    <RegisteredManifestChecksum>39FAB7B82356B66F7C87E339B59C4CB9CD343664A66CCBEC97910F9FA6385BF6</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>634C9576539BB5DC6AE36E19A3F35401B6D9C07B72A9F5AB7F76B4412A6C91DC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>16788b72-7890-4b1e-8b46-c4652dcb99a7_1.0.0.0_x86__m26kj864e853w</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>16788b72-7890-4b1e-8b46-c4652dcb99a7_m26kj864e853w!App</RegisteredUserModeAppID>
     <RegisteredPackageID>16788b72-7890-4b1e-8b46-c4652dcb99a7</RegisteredPackageID>
@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-10-28T16:54:43.968</Modified>
+      <Modified>2021-11-04T22:49:49.673</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.exe">
       <PackagePath>CustomerManagementApp.exe</PackagePath>
-      <Modified>2021-10-28T16:55:41.227</Modified>
+      <Modified>2021-11-04T22:54:42.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerServ\CustomerServ.winmd">
-      <PackagePath>CustomerServ.winmd</PackagePath>
-      <Modified>2021-10-28T16:53:58.558</Modified>
+    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.winmd">
+      <PackagePath>CustomerManagementAppService.winmd</PackagePath>
+      <Modified>2021-11-04T22:17:44.271</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.winmd">
       <PackagePath>CustomerManagementApp.winmd</PackagePath>
       <Modified>2021-10-25T12:00:44.094</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerServ\CustomerServ.dll">
-      <PackagePath>CustomerServ.dll</PackagePath>
-      <Modified>2021-10-28T16:54:01.449</Modified>
+    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.dll">
+      <PackagePath>CustomerManagementAppService.dll</PackagePath>
+      <Modified>2021-11-04T22:46:28.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -85,15 +85,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-10-28T16:55:40.792</Modified>
+      <Modified>2021-11-04T22:54:42.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\Dashboard.xbf">
       <PackagePath>Dashboard.xbf</PackagePath>
-      <Modified>2021-10-28T16:55:40.793</Modified>
+      <Modified>2021-11-04T22:54:42.126</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-10-28T16:55:40.793</Modified>
+      <Modified>2021-11-04T22:54:42.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -101,7 +101,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-10-28T16:54:43.375</Modified>
+      <Modified>2021-11-04T22:49:49.218</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

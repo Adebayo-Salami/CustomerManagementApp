@@ -19,6 +19,8 @@ using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
 
+using namespace CustomerManagementAppService;
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 MainPage::MainPage()
@@ -29,7 +31,8 @@ MainPage::MainPage()
 
 void CustomerManagementApp::MainPage::Btn_AddCustomer(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
-	//auto isLoggedIn = user().Authenticate()
+	UserService userService{};
+	auto result = userService.CreateUser(L"", L"", 10);
 	MessageDialog mesageDialogue("C++ -- Customer Added Succesfully! -- ");
 	mesageDialogue.ShowAsync();
 }

@@ -28,8 +28,14 @@
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.exe">
       <PackagePath>CustomerManagementApp.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.winmd">
+      <PackagePath>CustomerManagementAppService.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementApp\CustomerManagementApp.winmd">
       <PackagePath>CustomerManagementApp.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.dll">
+      <PackagePath>CustomerManagementAppService.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>

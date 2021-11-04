@@ -41,6 +41,66 @@ template<typename T>
     return ref new ::Platform::Box<T>((T)userType->CreateEnumUIntFromString(input));
 }
 
+template<typename TDeclaringType, typename TValue>
+::Platform::Object^ GetValueTypeMember_IsSuccessful(::Platform::Object^ instance)
+{
+    return ref new ::Platform::Box<TValue>(safe_cast<TDeclaringType^>(instance)->IsSuccessful);
+}
+
+template<typename TDeclaringType, typename TValue>
+::Platform::Object^ GetValueTypeMember_GetCompanyId(::Platform::Object^ instance)
+{
+    return ref new ::Platform::Box<TValue>(safe_cast<TDeclaringType^>(instance)->GetCompanyId);
+}
+
+template<typename TDeclaringType, typename TValue>
+::Platform::Object^ GetValueTypeMember_GetId(::Platform::Object^ instance)
+{
+    return ref new ::Platform::Box<TValue>(safe_cast<TDeclaringType^>(instance)->GetId);
+}
+
+template<typename TDeclaringType>
+::Platform::Object^ GetReferenceTypeMember_UserInfo(::Platform::Object^ instance)
+{
+    return safe_cast<TDeclaringType^>(instance)->UserInfo;
+}
+
+template<typename TDeclaringType>
+::Platform::Object^ GetReferenceTypeMember_Message(::Platform::Object^ instance)
+{
+    return safe_cast<TDeclaringType^>(instance)->Message;
+}
+
+template<typename TDeclaringType>
+::Platform::Object^ GetReferenceTypeMember_GetPassword(::Platform::Object^ instance)
+{
+    return safe_cast<TDeclaringType^>(instance)->GetPassword;
+}
+
+template<typename TDeclaringType>
+::Platform::Object^ GetReferenceTypeMember_GetUsername(::Platform::Object^ instance)
+{
+    return safe_cast<TDeclaringType^>(instance)->GetUsername;
+}
+
+template<typename TDeclaringType, typename TValue>
+void SetValueTypeMember_IsSuccessful(::Platform::Object^ instance, ::Platform::Object^ value)
+{
+    safe_cast<TDeclaringType^>(instance)->IsSuccessful = safe_cast<::Platform::IBox<TValue>^>(value)->Value;
+}
+
+template<typename TDeclaringType, typename TValue>
+void SetReferenceTypeMember_UserInfo(::Platform::Object^ instance, ::Platform::Object^ value)
+{
+    safe_cast<TDeclaringType^>(instance)->UserInfo = safe_cast<TValue^>(value);
+}
+
+template<typename TDeclaringType, typename TValue>
+void SetReferenceTypeMember_Message(::Platform::Object^ instance, ::Platform::Object^ value)
+{
+    safe_cast<TDeclaringType^>(instance)->Message = safe_cast<TValue^>(value);
+}
+
 enum TypeInfo_Flags
 {
     TypeInfo_Flags_None                 = 0x00,
@@ -71,38 +131,87 @@ struct TypeInfo
 const TypeInfo TypeInfos[] = 
 {
     //   0
-    L"Windows.UI.Xaml.Controls.Page", L"",
+    L"Int64", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
     -1,
     //   1
-    L"CustomerManagementApp.MainPage", L"",
-    &ActivateType<::CustomerManagementApp::MainPage>, nullptr, nullptr, nullptr,
-    0, // Windows.UI.Xaml.Controls.Page
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
-    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
-    -1,
-    //   2
-    L"CustomerManagementApp.Dashboard", L"",
-    &ActivateType<::CustomerManagementApp::Dashboard>, nullptr, nullptr, nullptr,
-    0, // Windows.UI.Xaml.Controls.Page
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
-    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
-    -1,
-    //   3
-    L"Windows.UI.Xaml.Controls.UserControl", L"",
+    L"Object", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
     -1,
+    //   2
+    L"String", L"",
+    nullptr, nullptr, nullptr, nullptr,
+    -1,
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
+    -1,
+    //   3
+    L"Boolean", L"",
+    nullptr, nullptr, nullptr, nullptr,
+    -1,
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
+    -1,
+    //   4
+    L"Windows.UI.Xaml.Controls.Page", L"",
+    nullptr, nullptr, nullptr, nullptr,
+    -1,
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
+    -1,
+    //   5
+    L"CustomerManagementApp.MainPage", L"",
+    &ActivateType<::CustomerManagementApp::MainPage>, nullptr, nullptr, nullptr,
+    4, // Windows.UI.Xaml.Controls.Page
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
+    -1,
+    //   6
+    L"CustomerManagementApp.Dashboard", L"",
+    &ActivateType<::CustomerManagementApp::Dashboard>, nullptr, nullptr, nullptr,
+    4, // Windows.UI.Xaml.Controls.Page
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
+    -1,
+    //   7
+    L"CustomerManagementAppService.User", L"",
+    &ActivateType<::CustomerManagementAppService::User>, nullptr, nullptr, nullptr,
+    1, // Object
+    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
+    -1,
+    //   8
+    L"Windows.UI.Xaml.Controls.UserControl", L"",
+    nullptr, nullptr, nullptr, nullptr,
+    -1,
+    4, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
+    -1,
+    //   9
+    L"CustomerManagementAppService.UserService", L"",
+    &ActivateType<::CustomerManagementAppService::UserService>, nullptr, nullptr, nullptr,
+    1, // Object
+    4, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
+    -1,
+    //  10
+    L"CustomerManagementAppService.AuthUserResultVM", L"",
+    &ActivateType<::CustomerManagementAppService::AuthUserResultVM>, nullptr, nullptr, nullptr,
+    1, // Object
+    4, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
+    TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
+    -1,
     //  Last type here is for padding
     L"", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1, 
-    0, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    7, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
     TypeInfo_Flags_None,
 };
 
@@ -113,38 +222,47 @@ const UINT TypeInfoLookup[] = {
       0,   //   3
       0,   //   4
       0,   //   5
-      0,   //   6
-      0,   //   7
-      0,   //   8
-      0,   //   9
-      0,   //  10
-      0,   //  11
-      0,   //  12
-      0,   //  13
-      0,   //  14
-      0,   //  15
-      0,   //  16
-      0,   //  17
-      0,   //  18
-      0,   //  19
-      0,   //  20
-      0,   //  21
-      0,   //  22
-      0,   //  23
-      0,   //  24
-      0,   //  25
-      0,   //  26
-      0,   //  27
-      0,   //  28
-      0,   //  29
-      1,   //  30
-      2,   //  31
-      3,   //  32
-      3,   //  33
-      3,   //  34
-      3,   //  35
-      3,   //  36
-      4,   //  37
+      1,   //   6
+      3,   //   7
+      4,   //   8
+      4,   //   9
+      4,   //  10
+      4,   //  11
+      4,   //  12
+      4,   //  13
+      4,   //  14
+      4,   //  15
+      4,   //  16
+      4,   //  17
+      4,   //  18
+      4,   //  19
+      4,   //  20
+      4,   //  21
+      4,   //  22
+      4,   //  23
+      4,   //  24
+      4,   //  25
+      4,   //  26
+      4,   //  27
+      4,   //  28
+      4,   //  29
+      5,   //  30
+      6,   //  31
+      7,   //  32
+      7,   //  33
+      8,   //  34
+      8,   //  35
+      8,   //  36
+      9,   //  37
+      9,   //  38
+      9,   //  39
+      9,   //  40
+     10,   //  41
+     10,   //  42
+     10,   //  43
+     10,   //  44
+     10,   //  45
+     11,   //  46
 };
 
 const TypeInfo* GetTypeInfo(::Platform::String^ typeName)
@@ -159,6 +277,109 @@ const TypeInfo* GetTypeInfo(::Platform::String^ typeName)
                 return &TypeInfos[i];
             }
         }
+    }
+    return nullptr;
+}
+
+struct MemberInfo 
+{
+    PCWSTR shortName;
+    ::Platform::Object^ (*getter)(::Platform::Object^);
+    void (*setter)(::Platform::Object^, ::Platform::Object^);
+    int typeIndex;
+    int targetTypeIndex;
+    bool isReadOnly;
+    bool isDependencyProperty;
+    bool isAttachable;
+};
+
+const MemberInfo MemberInfos[] = 
+{
+    //   0 - CustomerManagementAppService.User.GetCompanyId
+    L"GetCompanyId",
+    &GetValueTypeMember_GetCompanyId<::CustomerManagementAppService::User, ::default::int64>,
+    nullptr,
+    0, // Int64
+    -1,
+    true,  false, false,
+    //   1 - CustomerManagementAppService.User.GetId
+    L"GetId",
+    &GetValueTypeMember_GetId<::CustomerManagementAppService::User, ::default::int64>,
+    nullptr,
+    0, // Int64
+    -1,
+    true,  false, false,
+    //   2 - CustomerManagementAppService.User.GetPassword
+    L"GetPassword",
+    &GetReferenceTypeMember_GetPassword<::CustomerManagementAppService::User>,
+    nullptr,
+    2, // String
+    -1,
+    true,  false, false,
+    //   3 - CustomerManagementAppService.User.GetUsername
+    L"GetUsername",
+    &GetReferenceTypeMember_GetUsername<::CustomerManagementAppService::User>,
+    nullptr,
+    2, // String
+    -1,
+    true,  false, false,
+    //   4 - CustomerManagementAppService.AuthUserResultVM.UserInfo
+    L"UserInfo",
+    &GetReferenceTypeMember_UserInfo<::CustomerManagementAppService::AuthUserResultVM>,
+    &SetReferenceTypeMember_UserInfo<::CustomerManagementAppService::AuthUserResultVM, ::CustomerManagementAppService::User>,
+    7, // CustomerManagementAppService.User
+    -1,
+    false, false, false,
+    //   5 - CustomerManagementAppService.AuthUserResultVM.Message
+    L"Message",
+    &GetReferenceTypeMember_Message<::CustomerManagementAppService::AuthUserResultVM>,
+    &SetReferenceTypeMember_Message<::CustomerManagementAppService::AuthUserResultVM, ::Platform::String>,
+    2, // String
+    -1,
+    false, false, false,
+    //   6 - CustomerManagementAppService.AuthUserResultVM.IsSuccessful
+    L"IsSuccessful",
+    &GetValueTypeMember_IsSuccessful<::CustomerManagementAppService::AuthUserResultVM, ::Platform::Boolean>,
+    &SetValueTypeMember_IsSuccessful<::CustomerManagementAppService::AuthUserResultVM, ::Platform::Boolean>,
+    3, // Boolean
+    -1,
+    false, false, false,
+};
+
+PCWSTR GetShortName(PCWSTR longName)
+{
+    PCWSTR separator = wcsrchr(longName, '.');
+    return separator != nullptr ? separator + 1: longName;
+}
+
+
+const MemberInfo* GetMemberInfo(::Platform::String^ longMemberName)
+{
+    auto lastDotIndex = longMemberName->Length();
+    while (true)
+    {
+        if (longMemberName->Data()[lastDotIndex] == '.')
+        {
+            const TypeInfo* pTypeInfo = GetTypeInfo(ref new ::Platform::String(longMemberName->Data(), lastDotIndex));
+            const TypeInfo* pNextTypeInfo = pTypeInfo + 1;
+            if (pTypeInfo)
+            {
+                PCWSTR shortMemberName = GetShortName(longMemberName->Data());
+                for (int i = pTypeInfo->firstMemberIndex; i < pNextTypeInfo->firstMemberIndex; i++)
+                {
+                    if (wcscmp(shortMemberName, MemberInfos[i].shortName) == 0)
+                    {
+                        return &MemberInfos[i];
+                    }
+                }
+            }
+            break;
+        }
+        if (lastDotIndex == 0)
+        {
+            break;
+        }
+        lastDotIndex--;
     }
     return nullptr;
 }
@@ -206,6 +427,12 @@ const TypeInfo* GetTypeInfo(::Platform::String^ typeName)
         userType->IsMarkupExtension = pTypeInfo->flags & TypeInfo_Flags_IsMarkupExtension;
         userType->CreateFromStringMethod = nullptr;
         userType->SetBoxedType(this->GetXamlTypeByName(::Platform::StringReference(pTypeInfo->boxedTypeIndex >= 0 ? TypeInfos[pTypeInfo->boxedTypeIndex].typeName : L"")));
+        int nextMemberIndex = pTypeInfo->firstMemberIndex;
+        for (int i=pTypeInfo->firstMemberIndex; i < pNextTypeInfo->firstMemberIndex; i++)
+        {
+            userType->AddMemberName(::Platform::StringReference(MemberInfos[i].shortName));
+            nextMemberIndex++;
+        }
         return userType;
     }
 }
@@ -213,8 +440,20 @@ const TypeInfo* GetTypeInfo(::Platform::String^ typeName)
 ::Windows::UI::Xaml::Markup::IXamlMember^ ::XamlTypeInfo::InfoProvider::XamlTypeInfoProvider::CreateXamlMember(::Platform::String^ longMemberName)
 {
     ::XamlTypeInfo::InfoProvider::XamlMember^ xamlMember = nullptr;
-    // No Local Properties
-    (void)longMemberName; // Unused parameter
+    const MemberInfo* pMemberInfo = GetMemberInfo(longMemberName);
+    if (pMemberInfo != nullptr)
+    {
+        xamlMember = ref new ::XamlTypeInfo::InfoProvider::XamlMember(
+            this,
+            ::Platform::StringReference(pMemberInfo->shortName),
+            ::Platform::StringReference(TypeInfos[pMemberInfo->typeIndex].typeName));
+        xamlMember->Getter = pMemberInfo->getter;
+        xamlMember->Setter = pMemberInfo->setter;
+        xamlMember->TargetTypeName = pMemberInfo->targetTypeIndex >= 0 ? ::Platform::StringReference(TypeInfos[pMemberInfo->targetTypeIndex].typeName) : L"";
+        xamlMember->IsReadOnly = pMemberInfo->isReadOnly;
+        xamlMember->IsDependencyProperty = pMemberInfo->isDependencyProperty;
+        xamlMember->IsAttachable = pMemberInfo->isAttachable;
+    }
     return xamlMember;
 }
 

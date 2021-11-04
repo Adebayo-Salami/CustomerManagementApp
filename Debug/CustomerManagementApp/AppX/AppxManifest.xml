@@ -35,9 +35,10 @@
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
-        <Path>CustomerServ.dll</Path>
-        <ActivatableClass ActivatableClassId="CustomerServ.Service" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="CustomerServ.CustomerService" ThreadingModel="both" />
+        <Path>CustomerManagementAppService.dll</Path>
+        <ActivatableClass ActivatableClassId="CustomerManagementAppService.User" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="CustomerManagementAppService.AuthUserResultVM" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="CustomerManagementAppService.UserService" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>
