@@ -43,4 +43,20 @@ namespace winrt::CustomerManagementAppService::implementation
     {
         throw hresult_not_implemented();
     }
+    void User::SetId(int64_t id)
+    {
+        throw hresult_not_implemented();
+    }
+    void User::SetUsername(hstring const& username)
+    {
+        throw hresult_not_implemented();
+    }
+    void User::SetPassword(hstring const& password)
+    {
+        throw hresult_not_implemented();
+    }
+    void User::SetCompanyId(int64_t companyId)
+    {
+        throw hresult_not_implemented();
+    }
 }

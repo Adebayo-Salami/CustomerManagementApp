@@ -63,6 +63,22 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->get_GetCompanyId(&value));
         return value;
     }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetId(int64_t id) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetId(id));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetUsername(param::hstring const& username) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetUsername(*(void**)(&username)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetPassword(param::hstring const& password) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetPassword(*(void**)(&password)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetCompanyId(int64_t companyId) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetCompanyId(companyId));
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::User) consume_CustomerManagementAppService_IUserFactory<D>::CreateInstance(int32_t id, param::hstring const& username, param::hstring const& password, int64_t companyId) const
     {
         void* value{};
@@ -165,6 +181,34 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<int64_t>(this->shim().GetCompanyId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetId(int64_t id) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetId(id);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetUsername(void* username) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetUsername(*reinterpret_cast<hstring const*>(&username));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetPassword(void* password) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetPassword(*reinterpret_cast<hstring const*>(&password));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall SetCompanyId(int64_t companyId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SetCompanyId(companyId);
             return 0;
         }
         catch (...) { return to_hresult(); }

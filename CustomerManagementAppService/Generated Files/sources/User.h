@@ -31,6 +31,10 @@ namespace winrt::CustomerManagementAppService::implementation
         hstring GetUsername();
         hstring GetPassword();
         int64_t GetCompanyId();
+        void SetId(int64_t id);
+        void SetUsername(hstring const& username);
+        void SetPassword(hstring const& password);
+        void SetCompanyId(int64_t companyId);
     };
 }
 namespace winrt::CustomerManagementAppService::factory_implementation

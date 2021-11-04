@@ -10,5 +10,9 @@ namespace CustomerManagementAppService
         String GetUsername{ get; };
         String GetPassword{ get; };
         Int64 GetCompanyId{ get; };
+        void SetId(Int64 id);
+        void SetUsername(String username);
+        void SetPassword(String password);
+        void SetCompanyId(Int64 companyId);
     }
 }

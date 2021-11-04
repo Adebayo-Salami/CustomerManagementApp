@@ -3,7 +3,6 @@ C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagement
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(14,147): warning C4100: 'companyId': unreferenced formal parameter
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(14,129): warning C4100: 'password': unreferenced formal parameter
 C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(14,104): warning C4100: 'username': unreferenced formal parameter
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(19,141): warning C4100: 'companyId': unreferenced formal parameter
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(19,123): warning C4100: 'password': unreferenced formal parameter
-C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(19,98): warning C4100: 'username': unreferenced formal parameter
+C:\Users\osalami\Documents\Applications\CustomerManagementApp\CustomerManagementAppService\UserService.cpp(33,23): warning C4101: 'pEnd': unreferenced local variable
+     Creating library C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.lib and object C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.exp
   CustomerManagementAppService.vcxproj -> C:\Users\osalami\Documents\Applications\CustomerManagementApp\Debug\CustomerManagementAppService\CustomerManagementAppService.dll

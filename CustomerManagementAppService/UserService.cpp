@@ -21,17 +21,33 @@ namespace winrt::CustomerManagementAppService::implementation
         vector<User> users{};
         ifstream UserDatabaseFile(userTable);
         string line;
+        int uniqueId = 0;
         if (UserDatabaseFile.is_open()) {
             while (getline(UserDatabaseFile, line)) {
+                uniqueId++;
                 User user{};
                 int position;
-                std::string outstr, token;
-                std::vector<string> words{};
+                string token;
+                vector<string> words{};
+                int index = 0;
+                char* pEnd;
                 while ((position = line.find(",")) != std::string::npos) {
                     token = line.substr(0, position);
+                    if (index == 0) {
+                        char c[3];
+                        strcpy_s(c, token.c_str());
+                        user.SetId(strtoll(c, NULL, 0));
+                    }
+                    else if (index == 1)
+                        user.SetUsername(to_hstring(token));
+                    else if (index == 2)
+                        user.SetPassword(to_hstring(token));
+                    else if (index == 3) {
+                        char c[3];
+                        strcpy_s(c, token.c_str());
+                        user.SetCompanyId(strtoll(c, NULL, 0));
+                    }
 
-                    //Remove the extra space from the front of the splitted string
-                    words.push_back(token.erase(0, token.find_first_not_of(" ")));
                     line.erase(0, position + line.length());
                 }
 
@@ -39,7 +55,7 @@ namespace winrt::CustomerManagementAppService::implementation
             }
         }
 
-
+        users.push_back(User(++uniqueId, to_hstring(username), to_hstring(password), companyId));
 
         throw hresult_not_implemented();
     }
