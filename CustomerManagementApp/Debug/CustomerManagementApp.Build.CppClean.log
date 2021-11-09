@@ -1,12 +1,15 @@
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.pch
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\vc142.pdb
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\vc142.idb
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\pch.obj
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\mainpage.xaml.obj
-c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\app.xaml.obj
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\dashboard.xaml.obj
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\xamltypeinfo.impl.g.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\mainpage.xaml.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\app.xaml.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\user.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\vc142.pdb
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\vc142.idb
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\xamltypeinfo.g.obj
+c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementappservice.winmd
+c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementappservice.pdb
+c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementappservice.pri
+c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementappservice.dll
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementapp.winmd
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementapp.lib
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementapp.exp
@@ -48,18 +51,49 @@ c:\users\osalami\documents\applications\customermanagementapp\customermanagement
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\projectarchitectures.txt
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\appxmanifest.xml
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementapp.build.appxrecipe
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.copycomplete
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customerserv.pri.xml
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\.winmd_cache\$customerserv.winmd_637710368385587129.json
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementappservice.pri.xml
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\.winmd_cache\$customermanagementappservice.winmd_637713084271960155.json
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\.winmd_cache\$customermanagementappservice.winmd_637716610642712519.json
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\customermanagementapp.winmd.lastbuild
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.ilk
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementapp.exe
 c:\users\osalami\documents\applications\customermanagementapp\debug\customermanagementapp\customermanagementapp.pdb
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\unmerged\xamlmetadataprovider.winmd
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.cppwinrt_comp.cache
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.cppwinrt_plat.cache
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.cppwinrt_ref.cache
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.mdmergeinputs.cache
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\pch.obj
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.cppwinrt_comp.rsp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.cppwinrt_plat.rsp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.cppwinrt_ref.rsp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.mdmerge.rsp
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customermanagementapp.vcxproj.midlrt.rsp
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\cl.command.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\cl.read.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\cl.write.1.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\copylocal.read.1u.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\copylocal.write.1u.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\customermanagementapp.read.1u.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\customermanagementapp.write.1u.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\link.command.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\link.read.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\link.write.1.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\midl-midlrt.write.1.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\midl.command.1.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\midl.read.1.tlog
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\debug\customer.4007e54e.tlog\xaml.read.1u.tlog
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\app.xaml.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\dashboard.xaml.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\mainpage.xaml.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\registerpage.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\registerpage.xaml.g.h
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\xamlbindinginfo.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\xamlbindinginfo.xaml.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\xamlmetadataprovider.g.h
 c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\xamltypeinfo.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\xamltypeinfo.xaml.g.h
+c:\users\osalami\documents\applications\customermanagementapp\customermanagementapp\generated files\module.g.cpp
