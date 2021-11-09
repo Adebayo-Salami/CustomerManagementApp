@@ -12,10 +12,12 @@
 #include "Dashboard.xaml.h"
 #include "App.xaml.h"
 #include "MainPage.xaml.h"
+#include "RegisterPage.xaml.h"
 #include "XamlBindingInfo.g.hpp"
 #include "Dashboard.g.hpp"
 #include "App.g.hpp"
 #include "MainPage.g.hpp"
+#include "RegisterPage.g.hpp"
 
 template<typename T>
 ::Platform::Object^ ActivateType()
@@ -187,20 +189,27 @@ const TypeInfo TypeInfos[] =
     TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
     -1,
     //   8
+    L"CustomerManagementApp.RegisterPage", L"",
+    &ActivateType<::CustomerManagementApp::RegisterPage>, nullptr, nullptr, nullptr,
+    4, // Windows.UI.Xaml.Controls.Page
+    4, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Custom,
+    TypeInfo_Flags_IsLocalType | TypeInfo_Flags_None,
+    -1,
+    //   9
     L"Windows.UI.Xaml.Controls.UserControl", L"",
     nullptr, nullptr, nullptr, nullptr,
     -1,
     4, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsSystemType | TypeInfo_Flags_None,
     -1,
-    //   9
+    //  10
     L"CustomerManagementAppService.UserService", L"",
     &ActivateType<::CustomerManagementAppService::UserService>, nullptr, nullptr, nullptr,
     1, // Object
     4, 0, -1, ::Windows::UI::Xaml::Interop::TypeKind::Metadata,
     TypeInfo_Flags_IsBindable | TypeInfo_Flags_None,
     -1,
-    //  10
+    //  11
     L"CustomerManagementAppService.AuthUserResultVM", L"",
     &ActivateType<::CustomerManagementAppService::AuthUserResultVM>, nullptr, nullptr, nullptr,
     1, // Object
@@ -251,18 +260,18 @@ const UINT TypeInfoLookup[] = {
       7,   //  32
       7,   //  33
       8,   //  34
-      8,   //  35
-      8,   //  36
-      9,   //  37
-      9,   //  38
-      9,   //  39
-      9,   //  40
-     10,   //  41
-     10,   //  42
-     10,   //  43
-     10,   //  44
-     10,   //  45
-     11,   //  46
+      9,   //  35
+      9,   //  36
+     10,   //  37
+     10,   //  38
+     10,   //  39
+     10,   //  40
+     11,   //  41
+     11,   //  42
+     11,   //  43
+     11,   //  44
+     11,   //  45
+     12,   //  46
 };
 
 const TypeInfo* GetTypeInfo(::Platform::String^ typeName)

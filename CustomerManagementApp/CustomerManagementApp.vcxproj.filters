@@ -61,5 +61,6 @@
     <Page Include="Dashboard.xaml">
       <Filter>Main</Filter>
     </Page>
+    <Page Include="RegisterPage.xaml" />
   </ItemGroup>
 </Project>

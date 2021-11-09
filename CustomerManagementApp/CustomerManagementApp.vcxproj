@@ -177,6 +177,9 @@
     <ClInclude Include="MainPage.xaml.h">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </ClInclude>
+    <ClInclude Include="RegisterPage.xaml.h">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </ClInclude>
     <ClInclude Include="User.h" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +190,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RegisterPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
@@ -223,6 +229,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RegisterPage.xaml.cpp">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="User.cpp" />
   </ItemGroup>
