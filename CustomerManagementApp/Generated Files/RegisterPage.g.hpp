@@ -32,8 +32,23 @@ void ::CustomerManagementApp::RegisterPage::Connect(int __connectionId, ::Platfo
     {
     case 2:
         {
-            ::Windows::UI::Xaml::Controls::Button^ element2 = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
-            (safe_cast<::Windows::UI::Xaml::Controls::Button^>(element2))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::CustomerManagementApp::RegisterPage::*)
+            this->txtCompany = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+        }
+        break;
+    case 3:
+        {
+            this->txtUsername = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+        }
+        break;
+    case 4:
+        {
+            this->txtPassword = safe_cast<::Windows::UI::Xaml::Controls::PasswordBox^>(__target);
+        }
+        break;
+    case 5:
+        {
+            ::Windows::UI::Xaml::Controls::Button^ element5 = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::Button^>(element5))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::CustomerManagementApp::RegisterPage::*)
                 (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&RegisterPage::RegisterUserAccount);
         }
         break;

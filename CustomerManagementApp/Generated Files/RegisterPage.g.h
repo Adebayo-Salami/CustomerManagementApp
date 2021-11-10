@@ -7,6 +7,16 @@
 //------------------------------------------------------------------------------
 
 
+namespace Windows {
+    namespace UI {
+        namespace Xaml {
+            namespace Controls {
+                ref class TextBox;
+                ref class PasswordBox;
+            }
+        }
+    }
+}
 
 namespace CustomerManagementApp
 {
@@ -29,6 +39,9 @@ namespace CustomerManagementApp
     
         class RegisterPage_obj1_Bindings;
     
+        private: ::Windows::UI::Xaml::Controls::TextBox^ txtCompany;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ txtUsername;
+        private: ::Windows::UI::Xaml::Controls::PasswordBox^ txtPassword;
     };
 }
 

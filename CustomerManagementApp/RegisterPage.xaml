@@ -27,9 +27,9 @@
         
         <!-- Body -->
         <StackPanel Grid.Row="1" Grid.RowSpan="2" Margin="40 40 40 40">
-            <TextBox Header="Company" Margin="10"/>
-            <TextBox Header="Username" Margin="10"/>
-            <TextBox Header="Pasword" Margin="10"/>
+            <TextBox Name="txtCompany" Header="Company" Margin="10"/>
+            <TextBox x:Name="txtUsername" Header="Username" Margin="10"/>
+            <PasswordBox x:Name="txtPassword" PasswordChar="*" Header="Password" Margin="10" />
             <Button Click="RegisterUserAccount"  Margin="10 0 20 0" Content="Register" />
         </StackPanel>
     </Grid>

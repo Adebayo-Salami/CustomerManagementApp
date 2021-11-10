@@ -4,7 +4,8 @@
 //
 
 #include "pch.h"
-#include "MainPage.xaml.h"
+//#include "MainPage.xaml.h"
+#include "RegisterPage.xaml.h"
 
 using namespace CustomerManagementApp;
 
@@ -65,7 +66,8 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+                //rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+                rootFrame->Navigate(TypeName(RegisterPage::typeid), e->Arguments);
             }
             // Place the frame in the current Window
             Window::Current->Content = rootFrame;
@@ -82,7 +84,8 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+                //rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
+                rootFrame->Navigate(TypeName(RegisterPage::typeid), e->Arguments);
             }
             // Ensure the current window is active
             Window::Current->Activate();

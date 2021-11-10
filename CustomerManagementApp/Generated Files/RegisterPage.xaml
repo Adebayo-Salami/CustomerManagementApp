@@ -27,10 +27,10 @@
         
         <!-- Body -->
         <StackPanel Grid.Row="1" Grid.RowSpan="2" Margin="40 40 40 40">
-            <TextBox Header="Company" Margin="10"/>
-            <TextBox Header="Username" Margin="10"/>
-            <TextBox Header="Pasword" Margin="10"/>
-            <Button x:ConnectionId='2'                              Margin="10 0 20 0" Content="Register" />
+            <TextBox x:ConnectionId='2' Name="txtCompany" Header="Company" Margin="10"/>
+            <TextBox x:ConnectionId='3' x:Name="txtUsername" Header="Username" Margin="10"/>
+            <PasswordBox x:ConnectionId='4' x:Name="txtPassword" PasswordChar="*" Header="Password" Margin="10" />
+            <Button x:ConnectionId='5'                              Margin="10 0 20 0" Content="Register" />
         </StackPanel>
     </Grid>
 </Page>
