@@ -6,8 +6,8 @@
 
 namespace winrt::CustomerManagementAppService::implementation
 {
-    User::User(int32_t id, hstring const& username, hstring const& password, int64_t companyId) 
-        : Id(id), Username(username), Password(password), CompanyId(companyId)
+    User::User(int32_t id, hstring const& username, hstring const& password, hstring const& company)
+        : Id(id), Username(username), Password(password), Company(company)
     {
         
     }
@@ -27,9 +27,9 @@ namespace winrt::CustomerManagementAppService::implementation
         return Password;
     }
 
-    int64_t User::GetCompanyId()
+    hstring User::GetCompany()
     {
-        return CompanyId;
+        return Company;
     }
 
     void User::SetId(int64_t id)
@@ -47,8 +47,8 @@ namespace winrt::CustomerManagementAppService::implementation
         Password = password;
     }
 
-    void User::SetCompanyId(int64_t companyId)
+    void User::SetCompany(hstring company)
     {
-        CompanyId = companyId;
+        Company = company;
     }
 }

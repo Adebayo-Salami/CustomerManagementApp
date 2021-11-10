@@ -12,20 +12,20 @@ namespace winrt::CustomerManagementAppService::implementation
         long Id;
         hstring Username;
         hstring Password;
-        long CompanyId;
+        hstring Company;
 
         //Accesible Functions
-        User() : Id(0), Username(L""), Password(L""), CompanyId(0) {};
-        User(int32_t id, hstring const& username, hstring const& password, int64_t companyId);
+        User() : Id(0), Username(L""), Password(L""), Company(L"") {};
+        User(int32_t id, hstring const& username, hstring const& password, hstring const& company);
 
         int64_t GetId();
         hstring GetUsername();
         hstring GetPassword();
-        int64_t GetCompanyId();
+        hstring GetCompany();
         void SetId(int64_t id);
         void SetUsername(hstring const& username);
         void SetPassword(hstring const& password);
-        void SetCompanyId(int64_t companyId);
+        void SetCompany(hstring company);
     };
 }
 

@@ -8,7 +8,7 @@ namespace CustomerManagementAppService
     {
         UserService();
         AuthUserResultVM GetUserByID(Int32 Id);
-        AuthUserResultVM AuthenticateUser(String username, String password, Int64 companyId);
-        AuthUserResultVM CreateUser(String username, String password, Int64 companyId);
+        AuthUserResultVM AuthenticateUser(String username, String password, String company);
+        AuthUserResultVM CreateUser(String username, String password, String company);
     }
 }

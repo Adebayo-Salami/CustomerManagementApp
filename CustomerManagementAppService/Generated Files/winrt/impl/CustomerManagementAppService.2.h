@@ -17,7 +17,7 @@ WINRT_EXPORT namespace winrt::CustomerManagementAppService
         User(std::nullptr_t) noexcept {}
         User(void* ptr, take_ownership_from_abi_t) noexcept : winrt::CustomerManagementAppService::IUser(ptr, take_ownership_from_abi) {}
         User();
-        User(int32_t id, param::hstring const& username, param::hstring const& password, int64_t companyId);
+        User(int32_t id, param::hstring const& username, param::hstring const& password, param::hstring const& company);
     };
     struct __declspec(empty_bases) UserService : winrt::CustomerManagementAppService::IUserService
     {

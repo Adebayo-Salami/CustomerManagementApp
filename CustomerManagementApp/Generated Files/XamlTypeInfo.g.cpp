@@ -50,12 +50,6 @@ template<typename TDeclaringType, typename TValue>
 }
 
 template<typename TDeclaringType, typename TValue>
-::Platform::Object^ GetValueTypeMember_GetCompanyId(::Platform::Object^ instance)
-{
-    return ref new ::Platform::Box<TValue>(safe_cast<TDeclaringType^>(instance)->GetCompanyId);
-}
-
-template<typename TDeclaringType, typename TValue>
 ::Platform::Object^ GetValueTypeMember_GetId(::Platform::Object^ instance)
 {
     return ref new ::Platform::Box<TValue>(safe_cast<TDeclaringType^>(instance)->GetId);
@@ -71,6 +65,12 @@ template<typename TDeclaringType>
 ::Platform::Object^ GetReferenceTypeMember_Message(::Platform::Object^ instance)
 {
     return safe_cast<TDeclaringType^>(instance)->Message;
+}
+
+template<typename TDeclaringType>
+::Platform::Object^ GetReferenceTypeMember_GetCompany(::Platform::Object^ instance)
+{
+    return safe_cast<TDeclaringType^>(instance)->GetCompany;
 }
 
 template<typename TDeclaringType>
@@ -304,11 +304,11 @@ struct MemberInfo
 
 const MemberInfo MemberInfos[] = 
 {
-    //   0 - CustomerManagementAppService.User.GetCompanyId
-    L"GetCompanyId",
-    &GetValueTypeMember_GetCompanyId<::CustomerManagementAppService::User, ::default::int64>,
+    //   0 - CustomerManagementAppService.User.GetCompany
+    L"GetCompany",
+    &GetReferenceTypeMember_GetCompany<::CustomerManagementAppService::User>,
     nullptr,
-    0, // Int64
+    2, // String
     -1,
     true,  false, false,
     //   1 - CustomerManagementAppService.User.GetId

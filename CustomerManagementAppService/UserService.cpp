@@ -11,12 +11,12 @@ namespace winrt::CustomerManagementAppService::implementation
         throw hresult_not_implemented();
     }
 
-    winrt::CustomerManagementAppService::AuthUserResultVM UserService::AuthenticateUser(hstring const& username, hstring const& password, int64_t companyId)
+    winrt::CustomerManagementAppService::AuthUserResultVM UserService::AuthenticateUser(hstring const& username, hstring const& password, hstring const& company)
     {
         throw hresult_not_implemented();
     }
 
-    winrt::CustomerManagementAppService::AuthUserResultVM UserService::CreateUser(hstring const& username, hstring const& password, int64_t companyId)
+    winrt::CustomerManagementAppService::AuthUserResultVM UserService::CreateUser(hstring const& username, hstring const& password, hstring const& company)
     {
         vector<User> users{};
         ifstream UserDatabaseFile(userTable);
@@ -45,7 +45,7 @@ namespace winrt::CustomerManagementAppService::implementation
                     else if (index == 3) {
                         char c[3];
                         strcpy_s(c, token.c_str());
-                        user.SetCompanyId(strtoll(c, NULL, 0));
+                        //user.SetCompany(strtoll(c, NULL, 0));
                     }
 
                     line.erase(0, position + line.length());
@@ -55,7 +55,7 @@ namespace winrt::CustomerManagementAppService::implementation
             }
         }
 
-        users.push_back(User(++uniqueId, to_hstring(username), to_hstring(password), companyId));
+        //users.push_back(User(++uniqueId, to_hstring(username), to_hstring(password), companyId));
 
         throw hresult_not_implemented();
     }

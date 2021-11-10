@@ -33,9 +33,9 @@ namespace winrt::CustomerManagementAppService::factory_implementation
         {
             return make<T>();
         }
-        auto CreateInstance(int32_t id, hstring const& username, hstring const& password, int64_t companyId)
+        auto CreateInstance(int32_t id, hstring const& username, hstring const& password, hstring const& company)
         {
-            return make<T>(id, username, password, companyId);
+            return make<T>(id, username, password, company);
         }
     };
 }

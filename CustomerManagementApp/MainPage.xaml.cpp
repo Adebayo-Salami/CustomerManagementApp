@@ -32,7 +32,7 @@ MainPage::MainPage()
 void CustomerManagementApp::MainPage::Btn_AddCustomer(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
 {
 	UserService userService{};
-	auto result = userService.CreateUser(L"", L"", 10);
+	auto result = userService.CreateUser(L"", L"", L"");
 	MessageDialog mesageDialogue("C++ -- Customer Added Succesfully! -- ");
 	mesageDialogue.ShowAsync();
 }

@@ -10,8 +10,8 @@ WINRT_EXPORT namespace winrt::CustomerManagementAppService
         User(make<CustomerManagementAppService::implementation::User>())
     {
     }
-    User::User(int32_t id, param::hstring const& username, param::hstring const& password, int64_t companyId) :
-        User(make<CustomerManagementAppService::implementation::User>(id, username, password, companyId))
+    User::User(int32_t id, param::hstring const& username, param::hstring const& password, param::hstring const& company) :
+        User(make<CustomerManagementAppService::implementation::User>(id, username, password, company))
     {
     }
 }

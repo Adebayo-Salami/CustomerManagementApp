@@ -5,14 +5,14 @@ namespace CustomerManagementAppService
     runtimeclass User 
     {
         User();
-        User(Int32 id, String username, String password, Int64 companyId);
+        User(Int32 id, String username, String password, String company);
         Int64 GetId{ get; };
         String GetUsername{ get; };
         String GetPassword{ get; };
-        Int64 GetCompanyId{ get; };
+        String GetCompany{ get; };
         void SetId(Int64 id);
         void SetUsername(String username);
         void SetPassword(String password);
-        void SetCompanyId(Int64 companyId);
+        void SetCompany(String company);
     }
 }

@@ -57,11 +57,11 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->get_GetPassword(&value));
         return hstring{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(int64_t) consume_CustomerManagementAppService_IUser<D>::GetCompanyId() const
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_CustomerManagementAppService_IUser<D>::GetCompany() const
     {
-        int64_t value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->get_GetCompanyId(&value));
-        return value;
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->get_GetCompany(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetId(int64_t id) const
     {
@@ -75,14 +75,14 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetPassword(*(void**)(&password)));
     }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetCompanyId(int64_t companyId) const
+    template <typename D> WINRT_IMPL_AUTO(void) consume_CustomerManagementAppService_IUser<D>::SetCompany(param::hstring const& company) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetCompanyId(companyId));
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUser)->SetCompany(*(void**)(&company)));
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::User) consume_CustomerManagementAppService_IUserFactory<D>::CreateInstance(int32_t id, param::hstring const& username, param::hstring const& password, int64_t companyId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::User) consume_CustomerManagementAppService_IUserFactory<D>::CreateInstance(int32_t id, param::hstring const& username, param::hstring const& password, param::hstring const& company) const
     {
         void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserFactory)->CreateInstance(id, *(void**)(&username), *(void**)(&password), companyId, &value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserFactory)->CreateInstance(id, *(void**)(&username), *(void**)(&password), *(void**)(&company), &value));
         return winrt::CustomerManagementAppService::User{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::GetUserByID(int32_t Id) const
@@ -91,16 +91,16 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->GetUserByID(Id, &result));
         return winrt::CustomerManagementAppService::AuthUserResultVM{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::AuthenticateUser(param::hstring const& username, param::hstring const& password, int64_t companyId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::AuthenticateUser(param::hstring const& username, param::hstring const& password, param::hstring const& company) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->AuthenticateUser(*(void**)(&username), *(void**)(&password), companyId, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->AuthenticateUser(*(void**)(&username), *(void**)(&password), *(void**)(&company), &result));
         return winrt::CustomerManagementAppService::AuthUserResultVM{ result, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::CreateUser(param::hstring const& username, param::hstring const& password, int64_t companyId) const
+    template <typename D> WINRT_IMPL_AUTO(winrt::CustomerManagementAppService::AuthUserResultVM) consume_CustomerManagementAppService_IUserService<D>::CreateUser(param::hstring const& username, param::hstring const& password, param::hstring const& company) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->CreateUser(*(void**)(&username), *(void**)(&password), companyId, &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::CustomerManagementAppService::IUserService)->CreateUser(*(void**)(&username), *(void**)(&password), *(void**)(&company), &result));
         return winrt::CustomerManagementAppService::AuthUserResultVM{ result, take_ownership_from_abi };
     }
     template <typename D>
@@ -177,10 +177,11 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_GetCompanyId(int64_t* value) noexcept final try
+        int32_t __stdcall get_GetCompany(void** value) noexcept final try
         {
+            clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<int64_t>(this->shim().GetCompanyId());
+            *value = detach_from<hstring>(this->shim().GetCompany());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -205,10 +206,10 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall SetCompanyId(int64_t companyId) noexcept final try
+        int32_t __stdcall SetCompany(void* company) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().SetCompanyId(companyId);
+            this->shim().SetCompany(*reinterpret_cast<hstring const*>(&company));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -216,11 +217,11 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::CustomerManagementAppService::IUserFactory> : produce_base<D, winrt::CustomerManagementAppService::IUserFactory>
     {
-        int32_t __stdcall CreateInstance(int32_t id, void* username, void* password, int64_t companyId, void** value) noexcept final try
+        int32_t __stdcall CreateInstance(int32_t id, void* username, void* password, void* company, void** value) noexcept final try
         {
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::CustomerManagementAppService::User>(this->shim().CreateInstance(id, *reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), companyId));
+            *value = detach_from<winrt::CustomerManagementAppService::User>(this->shim().CreateInstance(id, *reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), *reinterpret_cast<hstring const*>(&company)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -236,19 +237,19 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall AuthenticateUser(void* username, void* password, int64_t companyId, void** result) noexcept final try
+        int32_t __stdcall AuthenticateUser(void* username, void* password, void* company, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::CustomerManagementAppService::AuthUserResultVM>(this->shim().AuthenticateUser(*reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), companyId));
+            *result = detach_from<winrt::CustomerManagementAppService::AuthUserResultVM>(this->shim().AuthenticateUser(*reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), *reinterpret_cast<hstring const*>(&company)));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall CreateUser(void* username, void* password, int64_t companyId, void** result) noexcept final try
+        int32_t __stdcall CreateUser(void* username, void* password, void* company, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::CustomerManagementAppService::AuthUserResultVM>(this->shim().CreateUser(*reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), companyId));
+            *result = detach_from<winrt::CustomerManagementAppService::AuthUserResultVM>(this->shim().CreateUser(*reinterpret_cast<hstring const*>(&username), *reinterpret_cast<hstring const*>(&password), *reinterpret_cast<hstring const*>(&company)));
             return 0;
         }
         catch (...) { return to_hresult(); }
